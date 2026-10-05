@@ -1,0 +1,273 @@
+{
+  "actualizado": "2026-10-05",
+  "metodologia": "Se incluyen los partidos de ámbito estatal con una media igual o superior a ~2 % en las encuestas de septiembre de 2026 (PP, PSOE, Vox, el espacio de Sumar —que concurre como Frente Amplio con IU, Más Madrid y Comuns—, Podemos y Se Acabó La Fiesta). Cada posición va de -2 (muy en contra) a +2 (muy a favor) y se ha asignado a partir de votaciones en el Congreso de la XV legislatura (2023-2026), programas electorales de 2023 y propuestas o declaraciones oficiales posteriores de sus dirigentes. Un 0 indica una posición intermedia, ambivalente o una abstención documentada. Cuando la posición de un partido no está documentada se marca como «incierta» (valor 0) y no debería pesar en el cálculo de afinidad. Las afirmaciones están redactadas en ambas direcciones para que estar de acuerdo no corresponda siempre al mismo bloque. Frente Amplio aún no ha publicado programa: se usan las posiciones de Sumar y sus socios en la legislatura. Se Acabó La Fiesta no tiene programa estatal completo, por lo que muchas de sus casillas son inciertas. Este test es orientativo y no sustituye la lectura de los programas electorales.",
+  "partidos": [
+    { "id": "PP", "nombre": "Partido Popular", "color": "#1d84ce" },
+    { "id": "PSOE", "nombre": "Partido Socialista Obrero Español", "color": "#e30613" },
+    { "id": "VOX", "nombre": "Vox", "color": "#63be21" },
+    { "id": "SUMAR", "nombre": "Frente Amplio (Sumar, IU, Más Madrid, Comuns)", "color": "#e51c55" },
+    { "id": "PODEMOS", "nombre": "Podemos", "color": "#6b2e68" },
+    { "id": "SALF", "nombre": "Se Acabó La Fiesta", "color": "#2b2b2b" }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tema": "Vivienda",
+      "texto": "El Estado debería poder limitar el precio del alquiler en las zonas con mercado tensionado.",
+      "posiciones": { "PP": -2, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203",
+        "https://www.eldiario.es/politica/junts-pp-vox-tumban-decretos-vivienda-congreso_1_13557141.html"
+      ]
+    },
+    {
+      "id": 2,
+      "tema": "Vivienda",
+      "texto": "Para abaratar la vivienda, lo prioritario es liberar suelo, agilizar licencias y bajar impuestos a la compra, más que intervenir en el mercado del alquiler.",
+      "posiciones": { "PP": 2, "PSOE": -1, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": 2 },
+      "inciertos": [],
+      "fuentes": [
+        "https://theobjective.com/espana/politica/2026-01-28/politicos-alvise-programa-electoral/",
+        "https://www.eldiario.es/politica/junts-pp-vox-tumban-decretos-vivienda-congreso_1_13557141.html"
+      ]
+    },
+    {
+      "id": 3,
+      "tema": "Economía e impuestos",
+      "texto": "Habría que bajar los impuestos de forma general, aunque eso obligue a reducir el gasto público.",
+      "posiciones": { "PP": 2, "PSOE": -1, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": 2 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.democrata.es/politica/alvise-perez-acabo-fiesta-elecciones-generales-deportaciones-referendum-ue/",
+        "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023"
+      ]
+    },
+    {
+      "id": 4,
+      "tema": "Economía e impuestos",
+      "texto": "Las grandes fortunas deberían pagar un impuesto específico sobre su patrimonio.",
+      "posiciones": { "PP": -2, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.boe.es/buscar/act.php?id=BOE-A-2022-22685"
+      ]
+    },
+    {
+      "id": 5,
+      "tema": "Trabajo",
+      "texto": "La jornada laboral máxima debería reducirse por ley a 37,5 horas semanales sin rebaja de sueldo.",
+      "posiciones": { "PP": -2, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.periodicodeibiza.es/noticias/nacional/2025/09/11/2467647/congreso-tumba-reduccion-jornada-laboral-prosperar-veto-vox-junts.html",
+        "https://www.elsaltodiario.com/reduccion-jornada/congreso-rechaza-reduccion-jornada-laboral-diaz-promete-volver-intentarlo"
+      ]
+    },
+    {
+      "id": 6,
+      "tema": "Trabajo",
+      "texto": "El salario mínimo debería seguir subiendo cada año, aunque no haya acuerdo con la patronal.",
+      "posiciones": { "PP": -1, "PSOE": 2, "VOX": 0, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["VOX", "SALF"],
+      "fuentes": [
+        "https://fashionunited.es/noticias/empresas/el-gobierno-aprueba-la-subida-del-3-1-por-ciento-del-smi-hasta-los-17-094-euros-anuales/2026021748414",
+        "https://www.bolsamania.com/noticias_print/economia/economia--amp-el-pp-rechaza-la-propuesta-de-diaz-de-subir-el-smi-si-no-hay-acuerdo-entre-patronal-y-sindicatos--21466638.html"
+      ]
+    },
+    {
+      "id": 7,
+      "tema": "Pensiones",
+      "texto": "Deberían ampliarse los incentivos fiscales para que los ciudadanos complementen su pensión pública con planes de pensiones privados.",
+      "posiciones": { "PP": 1, "PSOE": -1, "VOX": 1, "SUMAR": -1, "PODEMOS": -2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.finect.com/usuario/AsunInfante/articulos/elecciones-plan-pensiones-fondos-inversion",
+        "https://valenciaplaza.com/valenciaplaza/podemos-propone-al-gobierno-quitar-las-deducciones-por-planes-de-pensiones-para-recaudar-2000-millones-mas"
+      ]
+    },
+    {
+      "id": 8,
+      "tema": "Inmigración",
+      "texto": "Es positivo regularizar de forma extraordinaria a los inmigrantes que ya viven y trabajan en España sin papeles.",
+      "posiciones": { "PP": -2, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": -2 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.newtral.es/regularizacion-migrantes-gobierno-real-decreto/20260414/",
+        "https://www.ceutatv.com/articulo/politica/psoe-defiende-regularizacion-extraordinaria-inmigrantes-carga-pactos-entre-pp-vox/20260528165445244998.html"
+      ]
+    },
+    {
+      "id": 9,
+      "tema": "Inmigración",
+      "texto": "Todos los inmigrantes en situación irregular deberían ser expulsados de España.",
+      "posiciones": { "PP": -1, "PSOE": -2, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": 2 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.moncloa.com/2026/06/28/vox-900000-regularizaciones-inmigrantes-3391566/",
+        "https://www.democrata.es/politica/alvise-perez-acabo-fiesta-elecciones-generales-deportaciones-referendum-ue/"
+      ]
+    },
+    {
+      "id": 10,
+      "tema": "Modelo territorial",
+      "texto": "La ley de amnistía para los encausados por el procés fue positiva para la convivencia en Cataluña.",
+      "posiciones": { "PP": -2, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": -2 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.boe.es/buscar/act.php?id=BOE-A-2024-11776"
+      ]
+    },
+    {
+      "id": 11,
+      "tema": "Modelo territorial",
+      "texto": "Las comunidades autónomas deberían devolver al Estado competencias como educación o sanidad.",
+      "posiciones": { "PP": -1, "PSOE": -2, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.redaccionmedica.com/politica/20240412/vox-aboga-por-un-sns-recentralizado-frente-al-declive-autonomico/220296_0.html",
+        "https://www.eldiario.es/politica/vox-autonomias-extrema-derecha_1_1165337.html"
+      ]
+    },
+    {
+      "id": 12,
+      "tema": "Monarquía",
+      "texto": "Debería celebrarse un referéndum para que la ciudadanía elija entre monarquía y república.",
+      "posiciones": { "PP": -2, "PSOE": -2, "VOX": -2, "SUMAR": 1, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.deia.eus/politica/2023/01/05/iu-pide-referendum-elegir-monarquia-6333234.html",
+        "https://www.eldiario.es/politica/camino-convocar-referendum-monarquia-pide-presidente-autoriza-congreso-firma-propio-rey_1_6148940.html"
+      ]
+    },
+    {
+      "id": 13,
+      "tema": "Energía",
+      "texto": "Las centrales nucleares deberían seguir funcionando más allá del calendario de cierre previsto para 2035.",
+      "posiciones": { "PP": 2, "PSOE": -1, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.elprogreso.es/articulo/espana/gobierno-prorroga-vida-almaraz-desata-nuevo-debate-cierre-nucleares/202608141454061991647.html",
+        "https://www.pv-magazine.es/2026/08/17/el-gobierno-acepta-prorrogar-la-central-nuclear-de-almaraz-hasta-2030/"
+      ]
+    },
+    {
+      "id": 14,
+      "tema": "Medio ambiente",
+      "texto": "Hay que mantener los objetivos climáticos de la UE aunque supongan costes para empresas, agricultores o consumidores.",
+      "posiciones": { "PP": 0, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Pacto_Verde_Europeo"
+      ]
+    },
+    {
+      "id": 15,
+      "tema": "Igualdad y género",
+      "texto": "La ley de violencia de género debería sustituirse por una ley de violencia intrafamiliar que no distinga por sexo.",
+      "posiciones": { "PP": -2, "PSOE": -2, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://alicanteplaza.es/alicanteplaza/voxquierederogarlaleydeviolenciadegeneroycambiarlaporunaleydeprotecciondemujeresyfamilias1",
+        "https://www.boe.es/buscar/act.php?id=BOE-A-2004-21760"
+      ]
+    },
+    {
+      "id": 16,
+      "tema": "Educación",
+      "texto": "Las familias deberían poder elegir colegio concertado con la misma financiación pública que un centro público.",
+      "posiciones": { "PP": 2, "PSOE": -1, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.boe.es/buscar/act.php?id=BOE-A-2020-17264",
+        "https://www.ondavasca.com/feijoo-anuncia-que-si-gobierna-derogara-la-ley-de-memoria-y-la-ley-trans-y-revisara-las-de-eutanasia-y-educacion/"
+      ]
+    },
+    {
+      "id": 17,
+      "tema": "Sanidad",
+      "texto": "Debería limitarse por ley la gestión privada de servicios de la sanidad pública.",
+      "posiciones": { "PP": -2, "PSOE": 2, "VOX": -1, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.legaltoday.com/portada-2/portada-1/el-consejo-de-ministros-aprueba-el-proyecto-de-ley-para-garantizar-la-gestion-publica-de-la-sanidad-2026-05-12/",
+        "https://www.redaccionmedica.com/politica/20260318/la-ley-de-gestion-publica-llegara-herida-al-congreso-por-el-modelo-catalan/260331_0.html"
+      ]
+    },
+    {
+      "id": 18,
+      "tema": "Defensa y OTAN",
+      "texto": "España debería aumentar de forma significativa su gasto en defensa para cumplir los objetivos acordados en la OTAN.",
+      "posiciones": { "PP": 1, "PSOE": -1, "VOX": 1, "SUMAR": -2, "PODEMOS": -2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.elespanol.com/espana/politica/20250627/feijoo-asume-compromiso-llegar-gasto-defensa-anos-junto-mayoria-gobernantes-ue/1003743823012_0.html",
+        "https://www.moncloa.com/2026/07/06/gasto-militar-otan-sumar-influencia-3395419/"
+      ]
+    },
+    {
+      "id": 19,
+      "tema": "Europa",
+      "texto": "España debería celebrar un referéndum sobre su permanencia en la Unión Europea.",
+      "posiciones": { "PP": -2, "PSOE": -2, "VOX": -1, "SUMAR": -2, "PODEMOS": -2, "SALF": 2 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.democrata.es/politica/alvise-perez-acabo-fiesta-elecciones-generales-deportaciones-referendum-ue/"
+      ]
+    },
+    {
+      "id": 20,
+      "tema": "Seguridad",
+      "texto": "Hay que endurecer las penas de prisión para los delincuentes multirreincidentes, aunque se trate de hurtos de poca cuantía.",
+      "posiciones": { "PP": 2, "PSOE": 1, "VOX": 2, "SUMAR": -1, "PODEMOS": -1, "SALF": 2 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.diarimes.com/es/actualidad/260212/congreso-aprueba-ley-multirreincidencia-votos-psoe-pp-vox_208972.html",
+        "https://www.eldebate.com/espana/20260212/junts-saca-adelante-voto-pp-psoe-vox-ley-combatir-multirreincidencia_384540.html"
+      ]
+    },
+    {
+      "id": 21,
+      "tema": "Aborto",
+      "texto": "Debe mantenerse el derecho al aborto libre durante las primeras 14 semanas de embarazo.",
+      "posiciones": { "PP": 1, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": -1 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.eldiario.es/politica/pp-bloquea-derecho-aborto-constitucion-40-anos-despues-oponerse-legalizacion_1_12656142.html",
+        "https://www.esdiario.com/nacional/240905/142458/alvise-perez-antitaurino-polemica-votacion-aplausos-izquierda.html"
+      ]
+    },
+    {
+      "id": 22,
+      "tema": "Eutanasia",
+      "texto": "La ley de eutanasia debería mantenerse tal y como está.",
+      "posiciones": { "PP": -1, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://www.boe.es/buscar/act.php?id=BOE-A-2021-4628",
+        "https://www.ondavasca.com/feijoo-anuncia-que-si-gobierna-derogara-la-ley-de-memoria-y-la-ley-trans-y-revisara-las-de-eutanasia-y-educacion/"
+      ]
+    },
+    {
+      "id": 23,
+      "tema": "Tauromaquia",
+      "texto": "Las corridas de toros deberían seguir protegidas como patrimonio cultural.",
+      "posiciones": { "PP": 2, "PSOE": 0, "VOX": 2, "SUMAR": -2, "PODEMOS": -2, "SALF": -1 },
+      "inciertos": [],
+      "fuentes": [
+        "https://www.elsaltodiario.com/infoanimal/insulto-democracia-congreso-bloquea-debate-ilp-no-es-cultura",
+        "https://www.esdiario.com/nacional/240905/142458/alvise-perez-antitaurino-polemica-votacion-aplausos-izquierda.html"
+      ]
+    },
+    {
+      "id": 24,
+      "tema": "Política exterior",
+      "texto": "España debería mantener el embargo de armas a Israel por su actuación en Gaza.",
+      "posiciones": { "PP": -1, "PSOE": 2, "VOX": -2, "SUMAR": 2, "PODEMOS": 2, "SALF": 0 },
+      "inciertos": ["SALF"],
+      "fuentes": [
+        "https://rtvc.es/congreso-aprueba-embargo-armas-israel-8-octubre-2025/"
+      ]
+    }
+  ]
+}

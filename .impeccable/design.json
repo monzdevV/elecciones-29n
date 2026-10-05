@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T00:00:00Z",
+  "title": "Design System: Elecciones 29N",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Atlas Paper",
+        "canonical": "oklch(98.6% 0.003 250)",
+        "tonalRamp": [
+          "oklch(15% 0.003 250)",
+          "oklch(25% 0.003 250)",
+          "oklch(35% 0.003 250)",
+          "oklch(45% 0.003 250)",
+          "oklch(55% 0.003 250)",
+          "oklch(65% 0.003 250)",
+          "oklch(80% 0.003 250)",
+          "oklch(95% 0.003 250)"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Margin Paper",
+        "canonical": "oklch(96.4% 0.005 250)",
+        "tonalRamp": [
+          "oklch(15% 0.005 250)",
+          "oklch(25% 0.005 250)",
+          "oklch(35% 0.005 250)",
+          "oklch(45% 0.005 250)",
+          "oklch(55% 0.005 250)",
+          "oklch(65% 0.005 250)",
+          "oklch(80% 0.005 250)",
+          "oklch(95% 0.005 250)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Blue-Black Ink",
+        "canonical": "oklch(23% 0.03 258)",
+        "tonalRamp": [
+          "oklch(15% 0.03 258)",
+          "oklch(25% 0.03 258)",
+          "oklch(35% 0.03 258)",
+          "oklch(45% 0.03 258)",
+          "oklch(55% 0.03 258)",
+          "oklch(65% 0.03 258)",
+          "oklch(80% 0.03 258)",
+          "oklch(95% 0.03 258)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "oklch(42% 0.025 258)",
+        "tonalRamp": [
+          "oklch(15% 0.025 258)",
+          "oklch(25% 0.025 258)",
+          "oklch(35% 0.025 258)",
+          "oklch(45% 0.025 258)",
+          "oklch(55% 0.025 258)",
+          "oklch(65% 0.025 258)",
+          "oklch(80% 0.025 258)",
+          "oklch(95% 0.025 258)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "oklch(54% 0.02 258)",
+        "tonalRamp": [
+          "oklch(15% 0.02 258)",
+          "oklch(25% 0.02 258)",
+          "oklch(35% 0.02 258)",
+          "oklch(45% 0.02 258)",
+          "oklch(55% 0.02 258)",
+          "oklch(65% 0.02 258)",
+          "oklch(80% 0.02 258)",
+          "oklch(95% 0.02 258)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(87% 0.01 258)",
+        "tonalRamp": [
+          "oklch(15% 0.01 258)",
+          "oklch(25% 0.01 258)",
+          "oklch(35% 0.01 258)",
+          "oklch(45% 0.01 258)",
+          "oklch(55% 0.01 258)",
+          "oklch(65% 0.01 258)",
+          "oklch(80% 0.01 258)",
+          "oklch(95% 0.01 258)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "oklch(70% 0.015 258)",
+        "tonalRamp": [
+          "oklch(15% 0.015 258)",
+          "oklch(25% 0.015 258)",
+          "oklch(35% 0.015 258)",
+          "oklch(45% 0.015 258)",
+          "oklch(55% 0.015 258)",
+          "oklch(65% 0.015 258)",
+          "oklch(80% 0.015 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "sepia": {
+        "role": "primary",
+        "displayName": "Senate Ballot Sepia",
+        "canonical": "oklch(70% 0.11 68)",
+        "tonalRamp": [
+          "oklch(15% 0.11 68)",
+          "oklch(25% 0.11 68)",
+          "oklch(35% 0.11 68)",
+          "oklch(45% 0.11 68)",
+          "oklch(55% 0.11 68)",
+          "oklch(65% 0.11 68)",
+          "oklch(80% 0.11 68)",
+          "oklch(95% 0.11 68)"
+        ]
+      },
+      "sepia-ink": {
+        "role": "primary",
+        "displayName": "Sepia Ink",
+        "canonical": "oklch(47% 0.1 58)",
+        "tonalRamp": [
+          "oklch(15% 0.1 58)",
+          "oklch(25% 0.1 58)",
+          "oklch(35% 0.1 58)",
+          "oklch(45% 0.1 58)",
+          "oklch(55% 0.1 58)",
+          "oklch(65% 0.1 58)",
+          "oklch(80% 0.1 58)",
+          "oklch(95% 0.1 58)"
+        ]
+      },
+      "sepia-wash": {
+        "role": "primary",
+        "displayName": "Sepia Wash",
+        "canonical": "oklch(95% 0.03 75)",
+        "tonalRamp": [
+          "oklch(15% 0.03 75)",
+          "oklch(25% 0.03 75)",
+          "oklch(35% 0.03 75)",
+          "oklch(45% 0.03 75)",
+          "oklch(55% 0.03 75)",
+          "oklch(65% 0.03 75)",
+          "oklch(80% 0.03 75)",
+          "oklch(95% 0.03 75)"
+        ]
+      },
+      "seq-0": {
+        "role": "data",
+        "displayName": "Sepia Sequence 0",
+        "canonical": "oklch(96% 0.025 78)",
+        "tonalRamp": [
+          "oklch(45% 0.095 50)",
+          "oklch(58% 0.11 56)",
+          "oklch(70% 0.105 64)",
+          "oklch(80% 0.085 70)",
+          "oklch(89% 0.055 74)",
+          "oklch(96% 0.025 78)"
+        ]
+      },
+      "seq-1": {
+        "role": "data",
+        "displayName": "Sepia Sequence 1",
+        "canonical": "oklch(89% 0.055 74)",
+        "tonalRamp": [
+          "oklch(45% 0.095 50)",
+          "oklch(58% 0.11 56)",
+          "oklch(70% 0.105 64)",
+          "oklch(80% 0.085 70)",
+          "oklch(89% 0.055 74)",
+          "oklch(96% 0.025 78)"
+        ]
+      },
+      "seq-2": {
+        "role": "data",
+        "displayName": "Sepia Sequence 2",
+        "canonical": "oklch(80% 0.085 70)",
+        "tonalRamp": [
+          "oklch(45% 0.095 50)",
+          "oklch(58% 0.11 56)",
+          "oklch(70% 0.105 64)",
+          "oklch(80% 0.085 70)",
+          "oklch(89% 0.055 74)",
+          "oklch(96% 0.025 78)"
+        ]
+      },
+      "seq-3": {
+        "role": "data",
+        "displayName": "Sepia Sequence 3",
+        "canonical": "oklch(70% 0.105 64)",
+        "tonalRamp": [
+          "oklch(45% 0.095 50)",
+          "oklch(58% 0.11 56)",
+          "oklch(70% 0.105 64)",
+          "oklch(80% 0.085 70)",
+          "oklch(89% 0.055 74)",
+          "oklch(96% 0.025 78)"
+        ]
+      },
+      "seq-4": {
+        "role": "data",
+        "displayName": "Sepia Sequence 4",
+        "canonical": "oklch(58% 0.11 56)",
+        "tonalRamp": [
+          "oklch(45% 0.095 50)",
+          "oklch(58% 0.11 56)",
+          "oklch(70% 0.105 64)",
+          "oklch(80% 0.085 70)",
+          "oklch(89% 0.055 74)",
+          "oklch(96% 0.025 78)"
+        ]
+      },
+      "seq-5": {
+        "role": "data",
+        "displayName": "Sepia Sequence 5",
+        "canonical": "oklch(45% 0.095 50)",
+        "tonalRamp": [
+          "oklch(45% 0.095 50)",
+          "oklch(58% 0.11 56)",
+          "oklch(70% 0.105 64)",
+          "oklch(80% 0.085 70)",
+          "oklch(89% 0.055 74)",
+          "oklch(96% 0.025 78)"
+        ]
+      },
+      "focus": {
+        "role": "state",
+        "displayName": "Focus Blue",
+        "canonical": "oklch(55% 0.16 250)",
+        "tonalRamp": [
+          "oklch(15% 0.16 250)",
+          "oklch(25% 0.16 250)",
+          "oklch(35% 0.16 250)",
+          "oklch(45% 0.16 250)",
+          "oklch(55% 0.16 250)",
+          "oklch(65% 0.16 250)",
+          "oklch(80% 0.16 250)",
+          "oklch(95% 0.16 250)"
+        ]
+      },
+      "ok": {
+        "role": "state",
+        "displayName": "Ok",
+        "canonical": "oklch(52% 0.11 155)",
+        "tonalRamp": [
+          "oklch(15% 0.11 155)",
+          "oklch(25% 0.11 155)",
+          "oklch(35% 0.11 155)",
+          "oklch(45% 0.11 155)",
+          "oklch(55% 0.11 155)",
+          "oklch(65% 0.11 155)",
+          "oklch(80% 0.11 155)",
+          "oklch(95% 0.11 155)"
+        ]
+      },
+      "warn": {
+        "role": "state",
+        "displayName": "Warn",
+        "canonical": "oklch(55% 0.14 40)",
+        "tonalRamp": [
+          "oklch(15% 0.14 40)",
+          "oklch(25% 0.14 40)",
+          "oklch(35% 0.14 40)",
+          "oklch(45% 0.14 40)",
+          "oklch(55% 0.14 40)",
+          "oklch(65% 0.14 40)",
+          "oklch(80% 0.14 40)",
+          "oklch(95% 0.14 40)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home H1 only; condensed 82% width."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page H1 on guides, tools and provinces."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Prose and FAQ H2."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Dek under H1 and answer-box first paragraph."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading prose at a 40rem measure."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Tables, bars, seat lists, controls, buttons."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Key-fact values in stat rows."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase table heads, fact terms, group titles, answer legend."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tile-lift",
+        "value": "0 6px 16px -6px oklch(20% 0.03 258 / 0.45)",
+        "purpose": "Hover/focus lift of a cartogram tile, paired with scale(1.08)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions."
+      },
+      {
+        "name": "press",
+        "value": "transform 120ms ease-out to scale(0.97)",
+        "purpose": "Button and answer-scale press."
+      },
+      {
+        "name": "tile-lift",
+        "value": "180ms ease-out",
+        "purpose": "Cartogram tile lift."
+      },
+      {
+        "name": "seat-fill",
+        "value": "fill 350ms ease-out",
+        "purpose": "Hemicycle dot recolour on recalculation."
+      },
+      {
+        "name": "quiz-progress",
+        "value": "transform 300ms ease-out",
+        "purpose": "Quiz progress bar."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "40rem"
+      },
+      {
+        "name": "md",
+        "value": "48rem"
+      },
+      {
+        "name": "tool-split",
+        "value": "56rem"
+      },
+      {
+        "name": "nav",
+        "value": "62rem"
+      },
+      {
+        "name": "rail",
+        "value": "64rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action in heroes and tools; ink fill, presses in.",
+      "html": "<button class=\"ds-btn\">Abrir el simulador</button>",
+      "css": ".ds-btn { font-family: var(--f-ui); font-weight: 650; font-size: 0.9375rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.75rem; padding: 0.55rem 1.1rem; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); border-radius: var(--radius); cursor: pointer; transition: transform .12s var(--ease-out), background-color .15s; } .ds-btn:hover { background: oklch(from var(--ink) calc(l + 0.08) c h); } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action beside a primary button.",
+      "html": "<button class=\"ds-btn-ghost\">Ver la ley D'Hondt</button>",
+      "css": ".ds-btn-ghost { font-family: var(--f-ui); font-weight: 650; font-size: 0.9375rem; min-height: 2.75rem; padding: 0.55rem 1.1rem; background: transparent; color: var(--ink); border: 1px solid var(--rule-strong); border-radius: var(--radius); cursor: pointer; transition: transform .12s var(--ease-out), background-color .15s; } .ds-btn-ghost:hover { background: var(--paper-2); } .ds-btn-ghost:active { transform: scale(0.97); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segmented-option",
+      "description": "Mode switch in tool bars; pressed option inverts to ink.",
+      "html": "<div class=\"ds-seg\"><button aria-pressed=\"true\">2023</button><button aria-pressed=\"false\">Personalizado</button></div>",
+      "css": ".ds-seg { display: inline-flex; border: 1px solid var(--rule-strong); border-radius: var(--radius); overflow: hidden; font-family: var(--f-ui); font-size: 0.875rem; } .ds-seg button { font: inherit; font-weight: 600; background: none; border: 0; padding: 0.4rem 0.8rem; color: var(--ink-2); cursor: pointer; min-height: 2.25rem; } .ds-seg button:hover { color: var(--ink); } .ds-seg button[aria-pressed=\"true\"] { background: var(--ink); color: var(--paper); } .ds-seg button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }"
+    },
+    {
+      "name": "Percentage Input",
+      "kind": "input",
+      "refersTo": "input-percent",
+      "description": "Vote-share entry in the simulator rows.",
+      "html": "<label class=\"ds-pct\"><input type=\"text\" inputmode=\"decimal\" value=\"33,1\" aria-label=\"Porcentaje\"><span>%</span></label>",
+      "css": ".ds-pct { display: inline-flex; align-items: center; width: 4.6rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--paper); } .ds-pct:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; } .ds-pct input { width: 100%; min-width: 0; border: 0; background: none; color: var(--ink); font: 600 1rem/1 var(--f-ui); font-variant-numeric: tabular-nums; padding: 0.45rem 0 0.45rem 0.45rem; text-align: right; outline: none; } .ds-pct span { padding: 0 0.4rem 0 0.15rem; color: var(--ink-3); font-size: 0.875rem; font-family: var(--f-ui); }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Masthead links; current page carries the sepia underline.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Simulador</a><a href=\"#\">Mesa electoral</a><a href=\"#\">Voto por correo</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 0.15rem; font-family: var(--f-ui); font-size: 0.9375rem; } .ds-nav a { text-decoration: none; padding: 0.4rem 0.6rem; color: var(--ink-2); border-radius: var(--radius); transition: color .15s, background-color .15s; } .ds-nav a:hover { color: var(--ink); background: var(--paper-2); } .ds-nav a[aria-current=\"page\"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--sepia); border-radius: 0; } .ds-nav a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }"
+    },
+    {
+      "name": "Answer Box",
+      "kind": "card",
+      "refersTo": "answer-box",
+      "description": "Direct answer under every guide and province page head.",
+      "html": "<div class=\"ds-answer\"><span class=\"ds-answer__label\">Respuesta rápida</span><p>La mesa electoral se sortea entre el 31 de octubre y el 4 de noviembre.</p><p>Recibirás la notificación en tu domicilio.</p></div>",
+      "css": ".ds-answer { position: relative; max-width: 50rem; border: 1px solid var(--ink); background: var(--paper); padding: 1rem 1.5rem 1.5rem; color: var(--ink); font-family: var(--f-read); } .ds-answer__label { position: absolute; top: -0.7rem; left: 1rem; background: var(--paper); padding: 0 0.4rem; font-family: var(--f-ui); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sepia-ink); } .ds-answer p { margin: 0; font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.3rem); line-height: 1.5; } .ds-answer p + p { margin-top: 0.5rem; font-size: 1rem; color: var(--ink-2); }"
+    },
+    {
+      "name": "Plate with Cartogram Tiles",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "Numbered plate framing the tile cartogram, with legend and source foot.",
+      "html": "<figure class=\"ds-plate\"><div class=\"ds-plate__head\"><span class=\"ds-plate__title\">Diputados por circunscripción</span><span class=\"ds-plate__no\">350 escaños</span></div><div class=\"ds-plate__body\"><div class=\"ds-carto\"><a href=\"#\" style=\"background:var(--seq-1)\"><span class=\"c\">Z</span><span class=\"n\">7</span></a><a href=\"#\" style=\"background:var(--seq-5);color:oklch(98% 0.01 80)\"><span class=\"c\">M</span><span class=\"n\">37</span></a><a href=\"#\" style=\"background:var(--seq-4);color:oklch(98% 0.01 80)\"><span class=\"c\">B</span><span class=\"n\">32</span></a><a href=\"#\" style=\"background:var(--seq-0)\"><span class=\"c\">SO</span><span class=\"n\">2</span></a><a href=\"#\" style=\"background:var(--seq-2)\"><span class=\"c\">MU</span><span class=\"n\">10</span></a></div></div><div class=\"ds-plate__foot\"><span>Escaños por provincia</span><span>Fuente: BOE</span></div></figure>",
+      "css": ".ds-plate { margin: 0; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); } .ds-plate__head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; padding: 0.5rem 1rem; border-bottom: 1px solid var(--ink); font-family: var(--f-ui); } .ds-plate__title { font-size: 0.9375rem; font-weight: 700; } .ds-plate__no { font-size: 0.75rem; color: var(--ink-3); font-variant-numeric: tabular-nums; } .ds-plate__body { padding: 1rem; } .ds-plate__foot { display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 1rem; border-top: 1px solid var(--rule); font-family: var(--f-ui); font-size: 0.75rem; color: var(--ink-3); } .ds-carto { display: grid; grid-template-columns: repeat(5, 3.5rem); gap: 3px; } .ds-carto a { aspect-ratio: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 0.18rem 0.25rem; text-decoration: none; font-family: var(--f-ui); line-height: 1; color: oklch(22% 0.03 258); border-radius: 2px; transition: transform .18s var(--ease-out), box-shadow .18s var(--ease-out); } .ds-carto a:hover, .ds-carto a:focus-visible { transform: scale(1.08); box-shadow: 0 6px 16px -6px oklch(20% 0.03 258 / 0.45); position: relative; z-index: 2; } .ds-carto .c { font-size: 0.75rem; font-weight: 600; opacity: .8; } .ds-carto .n { font-size: 1.25rem; font-weight: 750; font-variant-numeric: tabular-nums; align-self: flex-end; }"
+    },
+    {
+      "name": "Key-Fact Grid",
+      "kind": "custom",
+      "refersTo": "key-facts",
+      "description": "Ruled definition grid of headline figures on home and province pages.",
+      "html": "<dl class=\"ds-facts\"><div><dt>Escaños</dt><dd>350</dd></div><div><dt>Circunscripciones</dt><dd>52</dd></div><div><dt>Jornada</dt><dd>29 nov</dd></div><div><dt>Voto por correo</dt><dd>19 nov</dd></div></dl>",
+      "css": ".ds-facts { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 2px solid var(--ink); max-width: 28rem; } .ds-facts div { padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid var(--rule); } .ds-facts div:nth-child(odd) { border-right: 1px solid var(--rule); } .ds-facts div:nth-child(even) { padding-left: 0.75rem; } .ds-facts dt { font-family: var(--f-ui); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); } .ds-facts dd { margin: 0.15rem 0 0; font-family: var(--f-ui); font-weight: 700; font-size: 1.15rem; font-variant-numeric: tabular-nums; color: var(--ink); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La lámina numerada",
+    "overview": "The site is an electoral atlas printed by a statistics office. Every page is a plate: a hairline-framed box with a numbered head, a body of data, and a foot that carries the legend and the official source. Trust comes from precision and composition, not ornament. Paper white, blue-black ink, and one ochre accent taken from the real Senate ballot carry the whole identity; party colours appear only inside the data.\n\nDensity is that of a good statistical yearbook: tabular figures, thin rules, key facts in ruled grids, labels set small in Archivo. Reading prose switches to Source Serif 4 at a 40rem measure. Interaction is quiet and mechanical: a tile lifts, a seat dot re-colours, a segmented control inverts to ink.\n\nThe system rejects the newspaper election-special register: giant headline over candidate photos, front-page red, party colours used as page decoration.",
+    "keyCharacteristics": [
+      "Ink-framed plates (1px ink border) with head, body and source foot.",
+      "One accent, the Senate sepia, used as a mark (current item, list markers, dates, the highlighted word), never as a surface.",
+      "Archivo variable width: condensed (82–92% wdth) in headings, normal in UI and data.",
+      "Tabular numerals everywhere a number appears.",
+      "Sequential sepia ramp (six steps) for quantitative fills; party colours only in charts.",
+      "Flat paper; depth only on hover of interactive tiles."
+    ],
+    "rules": [
+      {
+        "name": "The One Ochre Rule",
+        "body": "The only non-data hue on the page is the Senate sepia family. Any other hue must come from a party or a data scale.",
+        "section": "colors"
+      },
+      {
+        "name": "The Party Colours Stay In The Data Rule",
+        "body": "Party colours appear only as chart fills, seat dots and legend swatches; never as backgrounds, borders, buttons or headings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every number (seats, percentages, dates, countdowns, votes) is set in Archivo with tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Condensed Headings Rule",
+        "body": "Width narrows as size grows: 92% at title, 88% at headline, 82% at display. UI and data stay at normal width.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled, Not Raised Rule",
+        "body": "Containers are separated by rules and paper tone. Shadows exist only as a response to pointer or focus on a data tile.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put every chart, map and tool inside a plate with a numbered head and a source foot.",
+      "**Do** set every number in Archivo with tabular figures.",
+      "**Do** use Sepia Ink (sepia-ink) for accent text on paper and keep Senate Ballot Sepia (sepia) for lines, small fills and the dark folio strip.",
+      "**Do** separate blocks with rules: 1px hairline between rows, 1px ink around containers, 2px ink to open a group.",
+      "**Do** read every colour from tokens so dark mode carries through."
+    ],
+    "donts": [
+      "**Don't** use party colours outside the data (backgrounds, buttons, borders, headings).",
+      "**Don't** introduce a second accent hue; the sepia family and the data scales are the full palette.",
+      "**Don't** raise containers with shadows; the tile lift on hover is the only shadow.",
+      "**Don't** round containers; plates, tools, answer boxes and sections stay square, controls stop at 3px.",
+      "**Don't** build the newspaper election special: giant headline over candidate photos or front-page red."
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+dist/
+__pycache__/
+*.pyc
+.impeccable/config.local.json

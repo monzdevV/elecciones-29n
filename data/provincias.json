@@ -1,0 +1,3343 @@
+{
+ "eleccion_referencia": "2023-07-23",
+ "fuentes": [
+  "https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/02202307_TOTA.zip",
+  "https://infoelectoral.interior.gob.es/es/elecciones-celebradas/resultados-electorales/",
+  "https://www.boe.es/eli/es/rd/2025/12/03/1117",
+  "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672"
+ ],
+ "notas": "Resultados oficiales definitivos del Congreso del 23J 2023 (escrutinio general, incluido el voto CERA) tomados de los ficheros de Infoelectoral (Ministerio del Interior, 02202307_TOTA). censo = censo electoral del escrutinio (incluye CERA); votantes = válidos + nulos; validos = votos a candidaturas + votos en blanco; pct = % sobre votos válidos; participacion = votantes / censo. En 'resultados' se listan las candidaturas con al menos el 0,5% de los votos válidos o con escaño; el resto se agrega en OTROS (los votos en blanco no se incluyen en OTROS). Normalización: PSC, PSdeG, PSE-EE, PSIB y PSN se agrupan como PSOE; Sumar, Sumar-ECP, Compromís-Sumar, Sumar Aragón y Més-Sumar como SUMAR; 'nombre_lista' conserva las siglas oficiales de la candidatura. En Santa Cruz de Tenerife Vox no concurrió en 2023 (su candidatura fue excluida). escanos2026 es una ESTIMACIÓN calculada con el art. 162 LOREG (mínimo de 2 por provincia, 1 para Ceuta y 1 para Melilla, 248 restantes por cuota de población y mayores restos) sobre las cifras oficiales del Padrón a 1 de enero de 2025 (Real Decreto 1117/2025, BOE 11-12-2025); el mismo cálculo con la población usada en 2023 reproduce exactamente el reparto de 2023. Cambios estimados respecto a 2023: Madrid pasa de 37 a 38 escaños y Cádiz de 9 a 8. El reparto definitivo es el que fije el Real Decreto de convocatoria publicado en el BOE.",
+ "partidos": {
+  "PP": {
+   "nombre": "Partido Popular",
+   "color": "#1d84ce"
+  },
+  "PSOE": {
+   "nombre": "Partido Socialista Obrero Español",
+   "color": "#e30613"
+  },
+  "VOX": {
+   "nombre": "Vox",
+   "color": "#63be21"
+  },
+  "SUMAR": {
+   "nombre": "Sumar",
+   "color": "#e51c55"
+  },
+  "ERC": {
+   "nombre": "Esquerra Republicana de Catalunya",
+   "color": "#ffb232"
+  },
+  "JUNTS": {
+   "nombre": "Junts per Catalunya",
+   "color": "#00c3b2"
+  },
+  "BILDU": {
+   "nombre": "EH Bildu",
+   "color": "#a3c940"
+  },
+  "PNV": {
+   "nombre": "Partido Nacionalista Vasco (EAJ-PNV)",
+   "color": "#008a3c"
+  },
+  "BNG": {
+   "nombre": "Bloque Nacionalista Galego",
+   "color": "#76b3dd"
+  },
+  "CC": {
+   "nombre": "Coalición Canaria",
+   "color": "#ffd700"
+  },
+  "UPN": {
+   "nombre": "Unión del Pueblo Navarro",
+   "color": "#2a52be"
+  },
+  "PACMA": {
+   "nombre": "Partido Animalista con el Medio Ambiente",
+   "color": "#a3be3c"
+  },
+  "CUP": {
+   "nombre": "Candidatura d'Unitat Popular-Per la Ruptura",
+   "color": "#ffed00"
+  },
+  "PDECAT": {
+   "nombre": "Partit Demòcrata Europeu Català-Espai CiU",
+   "color": "#1f3f8f"
+  },
+  "NCBC": {
+   "nombre": "Nueva Canarias-Bloque Canarista",
+   "color": "#8bc34a"
+  },
+  "UPL": {
+   "nombre": "Unión del Pueblo Leonés",
+   "color": "#b5124a"
+  },
+  "EXISTE": {
+   "nombre": "Teruel Existe / Aragón Existe",
+   "color": "#037252"
+  },
+  "PAR": {
+   "nombre": "Partido Aragonés",
+   "color": "#f2b21b"
+  },
+  "SY": {
+   "nombre": "Soria ¡Ya!",
+   "color": "#2f8f3a"
+  },
+  "XAV": {
+   "nombre": "Por Ávila",
+   "color": "#7a3a8c"
+  },
+  "GBAI": {
+   "nombre": "Geroa Bai",
+   "color": "#e8402f"
+  },
+  "BQEX": {
+   "nombre": "Bloque Extremeño",
+   "color": "#2b8a3e"
+  },
+  "JMMAS": {
+   "nombre": "Jaén Merece Más",
+   "color": "#6bbf59"
+  },
+  "XH": {
+   "nombre": "Por Huelva",
+   "color": "#1e88c7"
+  },
+  "VP": {
+   "nombre": "Vamos Palencia",
+   "color": "#3fa535"
+  },
+  "VB": {
+   "nombre": "Vía Burgalesa",
+   "color": "#5b2a86"
+  },
+  "ZSI": {
+   "nombre": "Zamora Sí",
+   "color": "#00a3a1"
+  },
+  "EVPCAS": {
+   "nombre": "España Vaciada-Partido Castellano-Tierra Comunera",
+   "color": "#6f4e37"
+  },
+  "EV": {
+   "nombre": "España Vaciada",
+   "color": "#3f7f3f"
+  },
+  "ADELANTE": {
+   "nombre": "Adelante Andalucía",
+   "color": "#0f8a5f"
+  },
+  "CPM": {
+   "nombre": "Coalición por Melilla",
+   "color": "#1b9e3e"
+  }
+ },
+ "provincias": [
+  {
+   "nombre": "A Coruña",
+   "slug": "a-coruna",
+   "ccaa": "Galicia",
+   "capital": "A Coruña",
+   "poblacion2025": 1135612,
+   "escanos2023": 8,
+   "escanos2026": 8,
+   "censo": 1085673,
+   "votantes": 683187,
+   "participacion": 62.93,
+   "nulos": 5485,
+   "blanco": 5197,
+   "validos": 677702,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 292272,
+     "pct": 43.13,
+     "escanos": 4
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSdeG-PSOE",
+     "votos": 190897,
+     "pct": 28.17,
+     "escanos": 2
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 82618,
+     "pct": 12.19,
+     "escanos": 1
+    },
+    {
+     "partido": "BNG",
+     "nombre_lista": "B.N.G.",
+     "votos": 67653,
+     "pct": 9.98,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 34410,
+     "pct": 5.08,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 4655,
+     "pct": 0.69,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Álava",
+   "slug": "alava",
+   "ccaa": "País Vasco",
+   "capital": "Vitoria",
+   "poblacion2025": 342161,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 260214,
+   "votantes": 170538,
+   "participacion": 65.54,
+   "nulos": 1431,
+   "blanco": 722,
+   "validos": 169107,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSE-EE (PSOE)",
+     "votos": 46775,
+     "pct": 27.66,
+     "escanos": 1
+    },
+    {
+     "partido": "BILDU",
+     "nombre_lista": "EH Bildu",
+     "votos": 32987,
+     "pct": 19.51,
+     "escanos": 1
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 30212,
+     "pct": 17.87,
+     "escanos": 1
+    },
+    {
+     "partido": "PNV",
+     "nombre_lista": "EAJ-PNV",
+     "votos": 28075,
+     "pct": 16.6,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 21561,
+     "pct": 12.75,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 6573,
+     "pct": 3.89,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2202,
+     "pct": 1.3,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Albacete",
+   "slug": "albacete",
+   "ccaa": "Castilla-La Mancha",
+   "capital": "Albacete",
+   "poblacion2025": 390406,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 307988,
+   "votantes": 223917,
+   "participacion": 72.7,
+   "nulos": 2726,
+   "blanco": 1834,
+   "validos": 221191,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 88299,
+     "pct": 39.92,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 76322,
+     "pct": 34.51,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 36750,
+     "pct": 16.61,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 15834,
+     "pct": 7.16,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 1261,
+     "pct": 0.57,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 891,
+     "pct": 0.4,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Alicante",
+   "slug": "alicante",
+   "ccaa": "Comunidad Valenciana",
+   "capital": "Alicante",
+   "poblacion2025": 2030037,
+   "escanos2023": 12,
+   "escanos2026": 12,
+   "censo": 1306311,
+   "votantes": 908842,
+   "participacion": 69.57,
+   "nulos": 9650,
+   "blanco": 6575,
+   "validos": 899192,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 330293,
+     "pct": 36.73,
+     "escanos": 5
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 287737,
+     "pct": 32.0,
+     "escanos": 4
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 146133,
+     "pct": 16.25,
+     "escanos": 2
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR - COMPROMÍS",
+     "votos": 115787,
+     "pct": 12.88,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 7335,
+     "pct": 0.82,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 5332,
+     "pct": 0.59,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Almería",
+   "slug": "almeria",
+   "ccaa": "Andalucía",
+   "capital": "Almería",
+   "poblacion2025": 773577,
+   "escanos2023": 6,
+   "escanos2026": 6,
+   "censo": 516114,
+   "votantes": 324405,
+   "participacion": 62.86,
+   "nulos": 3163,
+   "blanco": 2464,
+   "validos": 321242,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 131524,
+     "pct": 40.94,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 93282,
+     "pct": 29.04,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 68364,
+     "pct": 21.28,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 21485,
+     "pct": 6.69,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 1962,
+     "pct": 0.61,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2161,
+     "pct": 0.67,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Asturias",
+   "slug": "asturias",
+   "ccaa": "Asturias",
+   "capital": "Oviedo",
+   "poblacion2025": 1013529,
+   "escanos2023": 7,
+   "escanos2026": 7,
+   "censo": 959023,
+   "votantes": 603183,
+   "participacion": 62.9,
+   "nulos": 6151,
+   "blanco": 6079,
+   "validos": 597032,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 212816,
+     "pct": 35.65,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 205049,
+     "pct": 34.34,
+     "escanos": 2
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 88630,
+     "pct": 14.85,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 74571,
+     "pct": 12.49,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 3167,
+     "pct": 0.53,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 6720,
+     "pct": 1.13,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Ávila",
+   "slug": "avila",
+   "ccaa": "Castilla y León",
+   "capital": "Ávila",
+   "poblacion2025": 159887,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 136669,
+   "votantes": 99120,
+   "participacion": 72.53,
+   "nulos": 1164,
+   "blanco": 632,
+   "validos": 97956,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 42369,
+     "pct": 43.25,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 26828,
+     "pct": 27.39,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 15068,
+     "pct": 15.38,
+     "escanos": 0
+    },
+    {
+     "partido": "XAV",
+     "nombre_lista": "XAV",
+     "votos": 7362,
+     "pct": 7.52,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 5027,
+     "pct": 5.13,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 670,
+     "pct": 0.68,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Badajoz",
+   "slug": "badajoz",
+   "ccaa": "Extremadura",
+   "capital": "Badajoz",
+   "poblacion2025": 663886,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 550702,
+   "votantes": 398233,
+   "participacion": 72.31,
+   "nulos": 6772,
+   "blanco": 3225,
+   "validos": 391461,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 153473,
+     "pct": 39.21,
+     "escanos": 2
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 148068,
+     "pct": 37.82,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 53492,
+     "pct": 13.66,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 26778,
+     "pct": 6.84,
+     "escanos": 0
+    },
+    {
+     "partido": "BQEX",
+     "nombre_lista": "BQEX",
+     "votos": 3885,
+     "pct": 0.99,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2540,
+     "pct": 0.65,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Islas Baleares",
+   "slug": "baleares",
+   "ccaa": "Islas Baleares",
+   "capital": "Palma",
+   "poblacion2025": 1237480,
+   "escanos2023": 8,
+   "escanos2026": 8,
+   "censo": 828755,
+   "votantes": 508233,
+   "participacion": 61.32,
+   "nulos": 4953,
+   "blanco": 4704,
+   "validos": 503280,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 179303,
+     "pct": 35.63,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSIB-PSOE",
+     "votos": 151786,
+     "pct": 30.16,
+     "escanos": 3
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "MÉS PER MALLORCA-MÉS PER MENORCA-SUMAR",
+     "votos": 83487,
+     "pct": 16.59,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 76547,
+     "pct": 15.21,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 4969,
+     "pct": 0.99,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2484,
+     "pct": 0.49,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Barcelona",
+   "slug": "barcelona",
+   "ccaa": "Cataluña",
+   "capital": "Barcelona",
+   "poblacion2025": 5983325,
+   "escanos2023": 32,
+   "escanos2026": 32,
+   "censo": 4243500,
+   "votantes": 2688720,
+   "participacion": 63.36,
+   "nulos": 21242,
+   "blanco": 21059,
+   "validos": 2667478,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSC",
+     "votos": 952347,
+     "pct": 35.7,
+     "escanos": 13
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR - ECP",
+     "votos": 405993,
+     "pct": 15.22,
+     "escanos": 5
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 367519,
+     "pct": 13.78,
+     "escanos": 5
+    },
+    {
+     "partido": "ERC",
+     "nombre_lista": "ERC",
+     "votos": 328697,
+     "pct": 12.32,
+     "escanos": 4
+    },
+    {
+     "partido": "JUNTS",
+     "nombre_lista": "JxCAT - JUNTS",
+     "votos": 258159,
+     "pct": 9.68,
+     "escanos": 3
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 201775,
+     "pct": 7.56,
+     "escanos": 2
+    },
+    {
+     "partido": "CUP",
+     "nombre_lista": "CUP-PR",
+     "votos": 67266,
+     "pct": 2.52,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 28201,
+     "pct": 1.06,
+     "escanos": 0
+    },
+    {
+     "partido": "PDECAT",
+     "nombre_lista": "PDeCAT-E-CiU",
+     "votos": 24452,
+     "pct": 0.92,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 12010,
+     "pct": 0.45,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Burgos",
+   "slug": "burgos",
+   "ccaa": "Castilla y León",
+   "capital": "Burgos",
+   "poblacion2025": 361556,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 296401,
+   "votantes": 204886,
+   "participacion": 69.12,
+   "nulos": 2317,
+   "blanco": 1851,
+   "validos": 202569,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 82329,
+     "pct": 40.64,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 69775,
+     "pct": 34.45,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 25858,
+     "pct": 12.77,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 17508,
+     "pct": 8.64,
+     "escanos": 0
+    },
+    {
+     "partido": "VB",
+     "nombre_lista": "VB",
+     "votos": 1774,
+     "pct": 0.88,
+     "escanos": 0
+    },
+    {
+     "partido": "EVPCAS",
+     "nombre_lista": "EV-PCAS-TC",
+     "votos": 1184,
+     "pct": 0.58,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2290,
+     "pct": 1.13,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Cáceres",
+   "slug": "caceres",
+   "ccaa": "Extremadura",
+   "capital": "Cáceres",
+   "poblacion2025": 387752,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 339491,
+   "votantes": 239747,
+   "participacion": 70.62,
+   "nulos": 3896,
+   "blanco": 1721,
+   "validos": 235851,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 91692,
+     "pct": 38.88,
+     "escanos": 2
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 89633,
+     "pct": 38.0,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 32076,
+     "pct": 13.6,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 16354,
+     "pct": 6.93,
+     "escanos": 0
+    },
+    {
+     "partido": "BQEX",
+     "nombre_lista": "BQEX",
+     "votos": 1922,
+     "pct": 0.81,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2453,
+     "pct": 1.04,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Cádiz",
+   "slug": "cadiz",
+   "ccaa": "Andalucía",
+   "capital": "Cádiz",
+   "poblacion2025": 1257041,
+   "escanos2023": 9,
+   "escanos2026": 8,
+   "censo": 1017958,
+   "votantes": 644801,
+   "participacion": 63.34,
+   "nulos": 7703,
+   "blanco": 7103,
+   "validos": 637098,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 221703,
+     "pct": 34.8,
+     "escanos": 4
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 211200,
+     "pct": 33.15,
+     "escanos": 3
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 96720,
+     "pct": 15.18,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 82115,
+     "pct": 12.89,
+     "escanos": 1
+    },
+    {
+     "partido": "ADELANTE",
+     "nombre_lista": "ADELANTE ANDALUCÍA",
+     "votos": 9191,
+     "pct": 1.44,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 5937,
+     "pct": 0.93,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 3129,
+     "pct": 0.49,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Cantabria",
+   "slug": "cantabria",
+   "ccaa": "Cantabria",
+   "capital": "Santander",
+   "poblacion2025": 593964,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 507818,
+   "votantes": 355145,
+   "participacion": 69.94,
+   "nulos": 4995,
+   "blanco": 3262,
+   "validos": 350150,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 147326,
+     "pct": 42.08,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 116596,
+     "pct": 33.3,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 49243,
+     "pct": 14.06,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 29713,
+     "pct": 8.49,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 2089,
+     "pct": 0.6,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1921,
+     "pct": 0.55,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Castellón",
+   "slug": "castellon",
+   "ccaa": "Comunidad Valenciana",
+   "capital": "Castellón de la Plana",
+   "poblacion2025": 627173,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 430830,
+   "votantes": 311581,
+   "participacion": 72.32,
+   "nulos": 3651,
+   "blanco": 2655,
+   "validos": 307930,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 108302,
+     "pct": 35.17,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 100530,
+     "pct": 32.65,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 48913,
+     "pct": 15.88,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR - COMPROMÍS",
+     "votos": 44187,
+     "pct": 14.35,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 1968,
+     "pct": 0.64,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1375,
+     "pct": 0.45,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Ceuta",
+   "slug": "ceuta",
+   "ccaa": "Ceuta",
+   "capital": "Ceuta",
+   "poblacion2025": 83595,
+   "escanos2023": 1,
+   "escanos2026": 1,
+   "censo": 63310,
+   "votantes": 33674,
+   "participacion": 53.19,
+   "nulos": 353,
+   "blanco": 328,
+   "validos": 33321,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 12918,
+     "pct": 38.77,
+     "escanos": 1
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 11332,
+     "pct": 34.01,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 7752,
+     "pct": 23.26,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 821,
+     "pct": 2.46,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 170,
+     "pct": 0.51,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Ciudad Real",
+   "slug": "ciudad-real",
+   "ccaa": "Castilla-La Mancha",
+   "capital": "Ciudad Real",
+   "poblacion2025": 494407,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 391495,
+   "votantes": 286895,
+   "participacion": 73.28,
+   "nulos": 3916,
+   "blanco": 2353,
+   "validos": 282979,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 114709,
+     "pct": 40.54,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 100102,
+     "pct": 35.37,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 46046,
+     "pct": 16.27,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 17405,
+     "pct": 6.15,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2364,
+     "pct": 0.84,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Córdoba",
+   "slug": "cordoba",
+   "ccaa": "Andalucía",
+   "capital": "Córdoba",
+   "poblacion2025": 772153,
+   "escanos2023": 6,
+   "escanos2026": 6,
+   "censo": 645288,
+   "votantes": 455564,
+   "participacion": 70.6,
+   "nulos": 6962,
+   "blanco": 4348,
+   "validos": 448602,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 169976,
+     "pct": 37.89,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 144080,
+     "pct": 32.12,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 62526,
+     "pct": 13.94,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 61594,
+     "pct": 13.73,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 2699,
+     "pct": 0.6,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 3379,
+     "pct": 0.75,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Cuenca",
+   "slug": "cuenca",
+   "ccaa": "Castilla-La Mancha",
+   "capital": "Cuenca",
+   "poblacion2025": 198216,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 152694,
+   "votantes": 115280,
+   "participacion": 75.5,
+   "nulos": 1472,
+   "blanco": 969,
+   "validos": 113808,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 45255,
+     "pct": 39.76,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 42528,
+     "pct": 37.37,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 17700,
+     "pct": 15.55,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 6325,
+     "pct": 5.56,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1031,
+     "pct": 0.91,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Girona",
+   "slug": "girona",
+   "ccaa": "Cataluña",
+   "capital": "Girona",
+   "poblacion2025": 832026,
+   "escanos2023": 6,
+   "escanos2026": 6,
+   "censo": 546370,
+   "votantes": 327159,
+   "participacion": 59.88,
+   "nulos": 4171,
+   "blanco": 2981,
+   "validos": 322988,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSC",
+     "votos": 93448,
+     "pct": 28.93,
+     "escanos": 2
+    },
+    {
+     "partido": "JUNTS",
+     "nombre_lista": "JxCAT - JUNTS",
+     "votos": 63251,
+     "pct": 19.58,
+     "escanos": 2
+    },
+    {
+     "partido": "ERC",
+     "nombre_lista": "ERC",
+     "votos": 47531,
+     "pct": 14.72,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR - ECP",
+     "votos": 35344,
+     "pct": 10.94,
+     "escanos": 1
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 31341,
+     "pct": 9.7,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 22706,
+     "pct": 7.03,
+     "escanos": 0
+    },
+    {
+     "partido": "CUP",
+     "nombre_lista": "CUP-PR",
+     "votos": 18229,
+     "pct": 5.64,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 3531,
+     "pct": 1.09,
+     "escanos": 0
+    },
+    {
+     "partido": "PDECAT",
+     "nombre_lista": "PDeCAT-E-CiU",
+     "votos": 3388,
+     "pct": 1.05,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1238,
+     "pct": 0.38,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Granada",
+   "slug": "granada",
+   "ccaa": "Andalucía",
+   "capital": "Granada",
+   "poblacion2025": 942618,
+   "escanos2023": 7,
+   "escanos2026": 7,
+   "censo": 765478,
+   "votantes": 509486,
+   "participacion": 66.56,
+   "nulos": 6641,
+   "blanco": 4057,
+   "validos": 502845,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 185996,
+     "pct": 36.99,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 165862,
+     "pct": 32.98,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 81080,
+     "pct": 16.12,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 58567,
+     "pct": 11.65,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 3143,
+     "pct": 0.63,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 4140,
+     "pct": 0.82,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Guadalajara",
+   "slug": "guadalajara",
+   "ccaa": "Castilla-La Mancha",
+   "capital": "Guadalajara",
+   "poblacion2025": 285390,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 196983,
+   "votantes": 142744,
+   "participacion": 72.47,
+   "nulos": 1831,
+   "blanco": 1143,
+   "validos": 140913,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 51195,
+     "pct": 36.33,
+     "escanos": 1
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 46479,
+     "pct": 32.98,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 27126,
+     "pct": 19.25,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 12907,
+     "pct": 9.16,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 1039,
+     "pct": 0.74,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1024,
+     "pct": 0.73,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Guipúzcoa",
+   "slug": "guipuzcoa",
+   "ccaa": "País Vasco",
+   "capital": "San Sebastián",
+   "poblacion2025": 733365,
+   "escanos2023": 6,
+   "escanos2026": 6,
+   "censo": 585873,
+   "votantes": 378965,
+   "participacion": 64.68,
+   "nulos": 2344,
+   "blanco": 2005,
+   "validos": 376621,
+   "resultados": [
+    {
+     "partido": "BILDU",
+     "nombre_lista": "EH Bildu",
+     "votos": 117321,
+     "pct": 31.15,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSE-EE (PSOE)",
+     "votos": 87709,
+     "pct": 23.29,
+     "escanos": 2
+    },
+    {
+     "partido": "PNV",
+     "nombre_lista": "EAJ-PNV",
+     "votos": 85026,
+     "pct": 22.58,
+     "escanos": 2
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 40081,
+     "pct": 10.64,
+     "escanos": 0
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 32721,
+     "pct": 8.69,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 7877,
+     "pct": 2.09,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 3881,
+     "pct": 1.03,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Huelva",
+   "slug": "huelva",
+   "ccaa": "Andalucía",
+   "capital": "Huelva",
+   "poblacion2025": 535703,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 402504,
+   "votantes": 260861,
+   "participacion": 64.81,
+   "nulos": 4057,
+   "blanco": 2410,
+   "validos": 256804,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 93565,
+     "pct": 36.43,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 92326,
+     "pct": 35.95,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 37572,
+     "pct": 14.63,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 26752,
+     "pct": 10.42,
+     "escanos": 0
+    },
+    {
+     "partido": "XH",
+     "nombre_lista": "XH",
+     "votos": 1931,
+     "pct": 0.75,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 1663,
+     "pct": 0.65,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 585,
+     "pct": 0.23,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Huesca",
+   "slug": "huesca",
+   "ccaa": "Aragón",
+   "capital": "Huesca",
+   "poblacion2025": 230624,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 173391,
+   "votantes": 121148,
+   "participacion": 69.87,
+   "nulos": 1253,
+   "blanco": 1217,
+   "validos": 119895,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 45783,
+     "pct": 38.19,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 40307,
+     "pct": 33.62,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 15155,
+     "pct": 12.64,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR ARAGÓN",
+     "votos": 13774,
+     "pct": 11.49,
+     "escanos": 0
+    },
+    {
+     "partido": "EXISTE",
+     "nombre_lista": "EXISTE",
+     "votos": 1312,
+     "pct": 1.09,
+     "escanos": 0
+    },
+    {
+     "partido": "PAR",
+     "nombre_lista": "PAR",
+     "votos": 717,
+     "pct": 0.6,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1630,
+     "pct": 1.36,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Jaén",
+   "slug": "jaen",
+   "ccaa": "Andalucía",
+   "capital": "Jaén",
+   "poblacion2025": 617604,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 518371,
+   "votantes": 373657,
+   "participacion": 72.08,
+   "nulos": 4926,
+   "blanco": 2497,
+   "validos": 368731,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 137617,
+     "pct": 37.32,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 133819,
+     "pct": 36.29,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 54400,
+     "pct": 14.75,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 29461,
+     "pct": 7.99,
+     "escanos": 0
+    },
+    {
+     "partido": "JMMAS",
+     "nombre_lista": "JM+",
+     "votos": 8293,
+     "pct": 2.25,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2644,
+     "pct": 0.72,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "La Rioja",
+   "slug": "la-rioja",
+   "ccaa": "La Rioja",
+   "capital": "Logroño",
+   "poblacion2025": 327286,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 252091,
+   "votantes": 176945,
+   "participacion": 70.19,
+   "nulos": 2282,
+   "blanco": 1608,
+   "validos": 174663,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 79715,
+     "pct": 45.64,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 62322,
+     "pct": 35.68,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 17056,
+     "pct": 9.77,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 11470,
+     "pct": 6.57,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2492,
+     "pct": 1.43,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Las Palmas",
+   "slug": "las-palmas",
+   "ccaa": "Canarias",
+   "capital": "Las Palmas de Gran Canaria",
+   "poblacion2025": 1167555,
+   "escanos2023": 8,
+   "escanos2026": 8,
+   "censo": 898882,
+   "votantes": 534912,
+   "participacion": 59.51,
+   "nulos": 5575,
+   "blanco": 3062,
+   "validos": 529337,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 175671,
+     "pct": 33.19,
+     "escanos": 3
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 136857,
+     "pct": 25.85,
+     "escanos": 3
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 77343,
+     "pct": 14.61,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 54369,
+     "pct": 10.27,
+     "escanos": 1
+    },
+    {
+     "partido": "NCBC",
+     "nombre_lista": "NC-bc",
+     "votos": 42430,
+     "pct": 8.02,
+     "escanos": 0
+    },
+    {
+     "partido": "CC",
+     "nombre_lista": "CCa",
+     "votos": 33558,
+     "pct": 6.34,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 3570,
+     "pct": 0.67,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2477,
+     "pct": 0.47,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "León",
+   "slug": "leon",
+   "ccaa": "Castilla y León",
+   "capital": "León",
+   "poblacion2025": 446771,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 422917,
+   "votantes": 277726,
+   "participacion": 65.67,
+   "nulos": 2486,
+   "blanco": 1577,
+   "validos": 275240,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 101605,
+     "pct": 36.92,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 92578,
+     "pct": 33.64,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 35451,
+     "pct": 12.88,
+     "escanos": 0
+    },
+    {
+     "partido": "UPL",
+     "nombre_lista": "U.P.L.",
+     "votos": 22675,
+     "pct": 8.24,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 18577,
+     "pct": 6.75,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2777,
+     "pct": 1.01,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Lleida",
+   "slug": "lleida",
+   "ccaa": "Cataluña",
+   "capital": "Lleida",
+   "poblacion2025": 456106,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 317225,
+   "votantes": 186929,
+   "participacion": 58.93,
+   "nulos": 2390,
+   "blanco": 2059,
+   "validos": 184539,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSC",
+     "votos": 54414,
+     "pct": 29.49,
+     "escanos": 2
+    },
+    {
+     "partido": "ERC",
+     "nombre_lista": "ERC",
+     "votos": 34331,
+     "pct": 18.6,
+     "escanos": 1
+    },
+    {
+     "partido": "JUNTS",
+     "nombre_lista": "JxCAT - JUNTS",
+     "votos": 33228,
+     "pct": 18.01,
+     "escanos": 1
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 23699,
+     "pct": 12.84,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR - ECP",
+     "votos": 14561,
+     "pct": 7.89,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 12560,
+     "pct": 6.81,
+     "escanos": 0
+    },
+    {
+     "partido": "CUP",
+     "nombre_lista": "CUP-PR",
+     "votos": 5449,
+     "pct": 2.95,
+     "escanos": 0
+    },
+    {
+     "partido": "PDECAT",
+     "nombre_lista": "PDeCAT-E-CiU",
+     "votos": 1865,
+     "pct": 1.01,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 1352,
+     "pct": 0.73,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1021,
+     "pct": 0.55,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Lugo",
+   "slug": "lugo",
+   "ccaa": "Galicia",
+   "capital": "Lugo",
+   "poblacion2025": 325759,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 337755,
+   "votantes": 200709,
+   "participacion": 59.42,
+   "nulos": 2143,
+   "blanco": 1251,
+   "validos": 198566,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 99769,
+     "pct": 50.24,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSdeG-PSOE",
+     "votos": 60163,
+     "pct": 30.3,
+     "escanos": 1
+    },
+    {
+     "partido": "BNG",
+     "nombre_lista": "B.N.G.",
+     "votos": 17197,
+     "pct": 8.66,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 10287,
+     "pct": 5.18,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 8643,
+     "pct": 4.35,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1256,
+     "pct": 0.63,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Madrid",
+   "slug": "madrid",
+   "ccaa": "Comunidad de Madrid",
+   "capital": "Madrid",
+   "poblacion2025": 7137031,
+   "escanos2023": 37,
+   "escanos2026": 38,
+   "censo": 5224561,
+   "votantes": 3639500,
+   "participacion": 69.66,
+   "nulos": 30827,
+   "blanco": 28960,
+   "validos": 3608673,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 1463183,
+     "pct": 40.55,
+     "escanos": 16
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 1004599,
+     "pct": 27.84,
+     "escanos": 10
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 557780,
+     "pct": 15.46,
+     "escanos": 6
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 506164,
+     "pct": 14.03,
+     "escanos": 5
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 21742,
+     "pct": 0.6,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 26245,
+     "pct": 0.73,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Málaga",
+   "slug": "malaga",
+   "ccaa": "Andalucía",
+   "capital": "Málaga",
+   "poblacion2025": 1791092,
+   "escanos2023": 11,
+   "escanos2026": 11,
+   "censo": 1239846,
+   "votantes": 798557,
+   "participacion": 64.41,
+   "nulos": 10219,
+   "blanco": 7509,
+   "validos": 788338,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 302000,
+     "pct": 38.31,
+     "escanos": 5
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 239172,
+     "pct": 30.34,
+     "escanos": 3
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 129758,
+     "pct": 16.46,
+     "escanos": 2
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 96652,
+     "pct": 12.26,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 8487,
+     "pct": 1.08,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 4760,
+     "pct": 0.6,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Melilla",
+   "slug": "melilla",
+   "ccaa": "Melilla",
+   "capital": "Melilla",
+   "poblacion2025": 86780,
+   "escanos2023": 1,
+   "escanos2026": 1,
+   "censo": 61118,
+   "votantes": 27649,
+   "participacion": 45.24,
+   "nulos": 300,
+   "blanco": 253,
+   "validos": 27349,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 13446,
+     "pct": 49.16,
+     "escanos": 1
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 6943,
+     "pct": 25.39,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 4359,
+     "pct": 15.94,
+     "escanos": 0
+    },
+    {
+     "partido": "CPM",
+     "nombre_lista": "CpM",
+     "votos": 1298,
+     "pct": 4.75,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 827,
+     "pct": 3.02,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 160,
+     "pct": 0.59,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 63,
+     "pct": 0.23,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Murcia",
+   "slug": "murcia",
+   "ccaa": "Región de Murcia",
+   "capital": "Murcia",
+   "poblacion2025": 1589138,
+   "escanos2023": 10,
+   "escanos2026": 10,
+   "censo": 1099703,
+   "votantes": 755255,
+   "participacion": 68.68,
+   "nulos": 7458,
+   "blanco": 5034,
+   "validos": 747797,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 307972,
+     "pct": 41.18,
+     "escanos": 4
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 189210,
+     "pct": 25.3,
+     "escanos": 3
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 163124,
+     "pct": 21.81,
+     "escanos": 2
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 71578,
+     "pct": 9.57,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 5063,
+     "pct": 0.68,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 5816,
+     "pct": 0.78,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Navarra",
+   "slug": "navarra",
+   "ccaa": "Navarra",
+   "capital": "Pamplona",
+   "poblacion2025": 683500,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 519918,
+   "votantes": 345095,
+   "participacion": 66.37,
+   "nulos": 3251,
+   "blanco": 2890,
+   "validos": 341844,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSN-PSOE",
+     "votos": 93553,
+     "pct": 27.37,
+     "escanos": 2
+    },
+    {
+     "partido": "BILDU",
+     "nombre_lista": "EH Bildu",
+     "votos": 58954,
+     "pct": 17.25,
+     "escanos": 1
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 57134,
+     "pct": 16.71,
+     "escanos": 1
+    },
+    {
+     "partido": "UPN",
+     "nombre_lista": "U.P.N.",
+     "votos": 52188,
+     "pct": 15.27,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 43922,
+     "pct": 12.85,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 19491,
+     "pct": 5.7,
+     "escanos": 0
+    },
+    {
+     "partido": "GBAI",
+     "nombre_lista": "GBAI",
+     "votos": 9938,
+     "pct": 2.91,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 3774,
+     "pct": 1.1,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Ourense",
+   "slug": "ourense",
+   "ccaa": "Galicia",
+   "capital": "Ourense",
+   "poblacion2025": 305573,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 355765,
+   "votantes": 188065,
+   "participacion": 52.86,
+   "nulos": 1794,
+   "blanco": 1109,
+   "validos": 186271,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 93182,
+     "pct": 50.02,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSdeG-PSOE",
+     "votos": 56035,
+     "pct": 30.08,
+     "escanos": 1
+    },
+    {
+     "partido": "BNG",
+     "nombre_lista": "B.N.G.",
+     "votos": 15317,
+     "pct": 8.22,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 10171,
+     "pct": 5.46,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 9080,
+     "pct": 4.87,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1377,
+     "pct": 0.74,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Palencia",
+   "slug": "palencia",
+   "ccaa": "Castilla y León",
+   "capital": "Palencia",
+   "poblacion2025": 158687,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 137642,
+   "votantes": 98079,
+   "participacion": 71.26,
+   "nulos": 1117,
+   "blanco": 833,
+   "validos": 96962,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 40709,
+     "pct": 41.98,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 33613,
+     "pct": 34.67,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 12504,
+     "pct": 12.9,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 5877,
+     "pct": 6.06,
+     "escanos": 0
+    },
+    {
+     "partido": "VP",
+     "nombre_lista": "VP",
+     "votos": 1917,
+     "pct": 1.98,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1509,
+     "pct": 1.56,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Pontevedra",
+   "slug": "pontevedra",
+   "ccaa": "Galicia",
+   "capital": "Pontevedra",
+   "poblacion2025": 946225,
+   "escanos2023": 7,
+   "escanos2026": 7,
+   "censo": 909434,
+   "votantes": 579125,
+   "participacion": 63.68,
+   "nulos": 6001,
+   "blanco": 3865,
+   "validos": 573124,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 227658,
+     "pct": 39.72,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSdeG-PSOE",
+     "votos": 179737,
+     "pct": 31.36,
+     "escanos": 3
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 75615,
+     "pct": 13.19,
+     "escanos": 1
+    },
+    {
+     "partido": "BNG",
+     "nombre_lista": "B.N.G.",
+     "votos": 53828,
+     "pct": 9.39,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 27539,
+     "pct": 4.81,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 3003,
+     "pct": 0.52,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1879,
+     "pct": 0.33,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Salamanca",
+   "slug": "salamanca",
+   "ccaa": "Castilla y León",
+   "capital": "Salamanca",
+   "poblacion2025": 328779,
+   "escanos2023": 4,
+   "escanos2026": 4,
+   "censo": 300506,
+   "votantes": 201419,
+   "participacion": 67.03,
+   "nulos": 2309,
+   "blanco": 1649,
+   "validos": 199110,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 93318,
+     "pct": 46.87,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 60718,
+     "pct": 30.49,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 29203,
+     "pct": 14.67,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 11012,
+     "pct": 5.53,
+     "escanos": 0
+    },
+    {
+     "partido": "EV",
+     "nombre_lista": "ESPAÑA VACIADA",
+     "votos": 1062,
+     "pct": 0.53,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2148,
+     "pct": 1.08,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Santa Cruz de Tenerife",
+   "slug": "santa-cruz-de-tenerife",
+   "ccaa": "Canarias",
+   "capital": "Santa Cruz de Tenerife",
+   "poblacion2025": 1082421,
+   "escanos2023": 7,
+   "escanos2026": 7,
+   "censo": 881217,
+   "votantes": 500777,
+   "participacion": 56.83,
+   "nulos": 6404,
+   "blanco": 5088,
+   "validos": 494373,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 174770,
+     "pct": 35.35,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 165590,
+     "pct": 33.49,
+     "escanos": 3
+    },
+    {
+     "partido": "CC",
+     "nombre_lista": "CCa",
+     "votos": 82805,
+     "pct": 16.75,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 53632,
+     "pct": 10.85,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 6147,
+     "pct": 1.24,
+     "escanos": 0
+    },
+    {
+     "partido": "NCBC",
+     "nombre_lista": "NC-bc",
+     "votos": 3165,
+     "pct": 0.64,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 3176,
+     "pct": 0.64,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Segovia",
+   "slug": "segovia",
+   "ccaa": "Castilla y León",
+   "capital": "Segovia",
+   "poblacion2025": 158470,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 119454,
+   "votantes": 89945,
+   "participacion": 75.3,
+   "nulos": 1332,
+   "blanco": 875,
+   "validos": 88613,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 39894,
+     "pct": 45.02,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 27113,
+     "pct": 30.6,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 12510,
+     "pct": 14.12,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 7137,
+     "pct": 8.05,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1084,
+     "pct": 1.22,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Sevilla",
+   "slug": "sevilla",
+   "ccaa": "Andalucía",
+   "capital": "Sevilla",
+   "poblacion2025": 1976624,
+   "escanos2023": 12,
+   "escanos2026": 12,
+   "censo": 1564082,
+   "votantes": 1075133,
+   "participacion": 68.74,
+   "nulos": 15775,
+   "blanco": 10951,
+   "validos": 1059358,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 387760,
+     "pct": 36.6,
+     "escanos": 5
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 353663,
+     "pct": 33.38,
+     "escanos": 4
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 148745,
+     "pct": 14.04,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 141087,
+     "pct": 13.32,
+     "escanos": 1
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 9288,
+     "pct": 0.88,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 7864,
+     "pct": 0.74,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Soria",
+   "slug": "soria",
+   "ccaa": "Castilla y León",
+   "capital": "Soria",
+   "poblacion2025": 90234,
+   "escanos2023": 2,
+   "escanos2026": 2,
+   "censo": 75768,
+   "votantes": 51157,
+   "participacion": 67.52,
+   "nulos": 388,
+   "blanco": 285,
+   "validos": 50769,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 18895,
+     "pct": 37.22,
+     "escanos": 1
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 14966,
+     "pct": 29.48,
+     "escanos": 1
+    },
+    {
+     "partido": "SY",
+     "nombre_lista": "SY",
+     "votos": 9697,
+     "pct": 19.1,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 4978,
+     "pct": 9.81,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 1711,
+     "pct": 3.37,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 237,
+     "pct": 0.47,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Tarragona",
+   "slug": "tarragona",
+   "ccaa": "Cataluña",
+   "capital": "Tarragona",
+   "poblacion2025": 874808,
+   "escanos2023": 6,
+   "escanos2026": 6,
+   "censo": 596689,
+   "votantes": 372426,
+   "participacion": 62.42,
+   "nulos": 4402,
+   "blanco": 3168,
+   "validos": 368024,
+   "resultados": [
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSC",
+     "votos": 121126,
+     "pct": 32.91,
+     "escanos": 2
+    },
+    {
+     "partido": "ERC",
+     "nombre_lista": "ERC",
+     "votos": 55461,
+     "pct": 15.07,
+     "escanos": 1
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 51061,
+     "pct": 13.87,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR - ECP",
+     "votos": 41719,
+     "pct": 11.34,
+     "escanos": 1
+    },
+    {
+     "partido": "JUNTS",
+     "nombre_lista": "JxCAT - JUNTS",
+     "votos": 40791,
+     "pct": 11.08,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 38039,
+     "pct": 10.34,
+     "escanos": 0
+    },
+    {
+     "partido": "CUP",
+     "nombre_lista": "CUP-PR",
+     "votos": 8700,
+     "pct": 2.36,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 3797,
+     "pct": 1.03,
+     "escanos": 0
+    },
+    {
+     "partido": "PDECAT",
+     "nombre_lista": "PDeCAT-E-CiU",
+     "votos": 2311,
+     "pct": 0.63,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 1851,
+     "pct": 0.5,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Teruel",
+   "slug": "teruel",
+   "ccaa": "Aragón",
+   "capital": "Teruel",
+   "poblacion2025": 136197,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 106352,
+   "votantes": 76561,
+   "participacion": 71.99,
+   "nulos": 648,
+   "blanco": 410,
+   "validos": 75913,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 26586,
+     "pct": 35.02,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 22226,
+     "pct": 29.28,
+     "escanos": 1
+    },
+    {
+     "partido": "EXISTE",
+     "nombre_lista": "EXISTE",
+     "votos": 11348,
+     "pct": 14.95,
+     "escanos": 0
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 9932,
+     "pct": 13.08,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 4126,
+     "pct": 5.44,
+     "escanos": 0
+    },
+    {
+     "partido": "PAR",
+     "nombre_lista": "PAR",
+     "votos": 711,
+     "pct": 0.94,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 574,
+     "pct": 0.76,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Toledo",
+   "slug": "toledo",
+   "ccaa": "Castilla-La Mancha",
+   "capital": "Toledo",
+   "poblacion2025": 750815,
+   "escanos2023": 6,
+   "escanos2026": 6,
+   "censo": 542567,
+   "votantes": 392988,
+   "participacion": 72.43,
+   "nulos": 5788,
+   "blanco": 2611,
+   "validos": 387200,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 146533,
+     "pct": 37.84,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 126072,
+     "pct": 32.56,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 76044,
+     "pct": 19.64,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 31876,
+     "pct": 8.23,
+     "escanos": 0
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 2024,
+     "pct": 0.52,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 2040,
+     "pct": 0.53,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Valencia",
+   "slug": "valencia",
+   "ccaa": "Comunidad Valenciana",
+   "capital": "Valencia",
+   "poblacion2025": 2758633,
+   "escanos2023": 16,
+   "escanos2026": 16,
+   "censo": 1999340,
+   "votantes": 1451187,
+   "participacion": 72.58,
+   "nulos": 14026,
+   "blanco": 10810,
+   "validos": 1437161,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 483469,
+     "pct": 33.64,
+     "escanos": 6
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 461353,
+     "pct": 32.1,
+     "escanos": 5
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR - COMPROMÍS",
+     "votos": 242839,
+     "pct": 16.9,
+     "escanos": 3
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 218657,
+     "pct": 15.21,
+     "escanos": 2
+    },
+    {
+     "partido": "PACMA",
+     "nombre_lista": "PACMA",
+     "votos": 10334,
+     "pct": 0.72,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 9699,
+     "pct": 0.67,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Valladolid",
+   "slug": "valladolid",
+   "ccaa": "Castilla y León",
+   "capital": "Valladolid",
+   "poblacion2025": 528841,
+   "escanos2023": 5,
+   "escanos2026": 5,
+   "censo": 431381,
+   "votantes": 319312,
+   "participacion": 74.02,
+   "nulos": 3003,
+   "blanco": 2419,
+   "validos": 316309,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 129170,
+     "pct": 40.84,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 103596,
+     "pct": 32.75,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 47948,
+     "pct": 15.16,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 28049,
+     "pct": 8.87,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 5127,
+     "pct": 1.62,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Vizcaya",
+   "slug": "vizcaya",
+   "ccaa": "País Vasco",
+   "capital": "Bilbao",
+   "poblacion2025": 1166816,
+   "escanos2023": 8,
+   "escanos2026": 8,
+   "censo": 942983,
+   "votantes": 614944,
+   "participacion": 65.21,
+   "nulos": 5251,
+   "blanco": 3391,
+   "validos": 609693,
+   "resultados": [
+    {
+     "partido": "PNV",
+     "nombre_lista": "EAJ-PNV",
+     "votos": 164188,
+     "pct": 26.93,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSE-EE (PSOE)",
+     "votos": 157448,
+     "pct": 25.82,
+     "escanos": 2
+    },
+    {
+     "partido": "BILDU",
+     "nombre_lista": "EH Bildu",
+     "votos": 125867,
+     "pct": 20.64,
+     "escanos": 2
+    },
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 70533,
+     "pct": 11.57,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 66592,
+     "pct": 10.92,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 16069,
+     "pct": 2.64,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 5605,
+     "pct": 0.92,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Zamora",
+   "slug": "zamora",
+   "ccaa": "Castilla y León",
+   "capital": "Zamora",
+   "poblacion2025": 165275,
+   "escanos2023": 3,
+   "escanos2026": 3,
+   "censo": 162998,
+   "votantes": 104671,
+   "participacion": 64.22,
+   "nulos": 1261,
+   "blanco": 922,
+   "validos": 103410,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 46196,
+     "pct": 44.67,
+     "escanos": 2
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 33601,
+     "pct": 32.49,
+     "escanos": 1
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 13652,
+     "pct": 13.2,
+     "escanos": 0
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR",
+     "votos": 5839,
+     "pct": 5.65,
+     "escanos": 0
+    },
+    {
+     "partido": "ZSI",
+     "nombre_lista": "Zsi",
+     "votos": 1843,
+     "pct": 1.78,
+     "escanos": 0
+    },
+    {
+     "partido": "UPL",
+     "nombre_lista": "U.P.L.",
+     "votos": 526,
+     "pct": 0.51,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 831,
+     "pct": 0.8,
+     "escanos": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Zaragoza",
+   "slug": "zaragoza",
+   "ccaa": "Aragón",
+   "capital": "Zaragoza",
+   "poblacion2025": 991991,
+   "escanos2023": 7,
+   "escanos2026": 7,
+   "censo": 740060,
+   "votantes": 523410,
+   "participacion": 70.73,
+   "nulos": 4705,
+   "blanco": 4693,
+   "validos": 518705,
+   "resultados": [
+    {
+     "partido": "PP",
+     "nombre_lista": "PP",
+     "votos": 186776,
+     "pct": 36.01,
+     "escanos": 3
+    },
+    {
+     "partido": "PSOE",
+     "nombre_lista": "PSOE",
+     "votos": 159858,
+     "pct": 30.82,
+     "escanos": 2
+    },
+    {
+     "partido": "VOX",
+     "nombre_lista": "VOX",
+     "votos": 79376,
+     "pct": 15.3,
+     "escanos": 1
+    },
+    {
+     "partido": "SUMAR",
+     "nombre_lista": "SUMAR ARAGÓN",
+     "votos": 69925,
+     "pct": 13.48,
+     "escanos": 1
+    },
+    {
+     "partido": "EXISTE",
+     "nombre_lista": "EXISTE",
+     "votos": 7780,
+     "pct": 1.5,
+     "escanos": 0
+    },
+    {
+     "partido": "PAR",
+     "nombre_lista": "PAR",
+     "votos": 2745,
+     "pct": 0.53,
+     "escanos": 0
+    },
+    {
+     "partido": "OTROS",
+     "votos": 7552,
+     "pct": 1.46,
+     "escanos": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+<!doctype html><body><pre id="o"></pre>
+<iframe id="a" src="/simulador-escanos/" width="1200" height="900"></iframe>
+<iframe id="b" src="/test-a-quien-voto/" width="1200" height="900"></iframe>
+<iframe id="c" src="/provincias/baleares/" width="1200" height="900"></iframe>
+<script>
+var out=[];function log(x){out.push(x);document.getElementById('o').textContent=out.join('\n');}
+function seats(D){return [].map.call(D.querySelectorAll('[data-seatlist] li'),function(l){return l.textContent}).join(' | ');}
+function set(D,id,v){var i=D.getElementById(id);i.value=v;i.dispatchEvent(new Event('input'));}
+setTimeout(function(){
+ try{
+ var A=document.getElementById('a').contentDocument;
+ log('SIM 2023: '+seats(A));
+ set(A,'pct-PP','38'); set(A,'pct-PSOE','27'); set(A,'pct-VOX','18'); set(A,'pct-SUMAR','6.5'); set(A,'pct-PODEMOS','3.5'); set(A,'pct-SALF','2');
+ log('SIM escenario: '+seats(A)); log(A.querySelector('[data-majority]').textContent+' / '+A.querySelector('[data-sum]').textContent);
+ log('circles: '+A.querySelectorAll('svg.hemi circle').length);
+ var B=document.getElementById('b').contentDocument;
+ var n=0; while(!B.querySelector('[data-stage]').hidden && n<30){ B.querySelectorAll('[data-scale] button')[0].click(); n++; }
+ log('TEST todo muy de acuerdo ('+n+'): '+[].map.call(B.querySelectorAll('[data-reslist] .bar'),function(l){return l.textContent}).join(' | '));
+ var C=document.getElementById('c').contentDocument;
+ log('BAL: '+seats(C)+' | senadores: '+C.querySelector('.factrow').textContent.replace(/\s+/g,' '));
+ }catch(e){log('ERR '+e.stack)}
+},3000);
+</script>

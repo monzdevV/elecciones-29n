@@ -1,0 +1,62 @@
+[
+  {
+    "q": "¿Cuándo son las elecciones generales de 2026?",
+    "a": "El domingo 29 de noviembre de 2026. Los colegios electorales abren de 9:00 a 20:00. La convocatoria se publicó en el BOE el martes 6 de octubre de 2026, 54 días antes de la votación, como exige el artículo 42 de la LOREG."
+  },
+  {
+    "q": "¿Por qué se han adelantado las elecciones?",
+    "a": "El presidente del Gobierno, Pedro Sánchez, anunció el 5 de octubre de 2026 la disolución anticipada de las Cortes después de que el Congreso rechazara dos reales decretos del Gobierno con medidas sobre vivienda. La disolución anticipada es una facultad del presidente del Gobierno prevista en el artículo 115 de la Constitución."
+  },
+  {
+    "q": "¿Qué se vota el 29 de noviembre?",
+    "a": "Se eligen las dos cámaras de las Cortes Generales: los 350 diputados del Congreso y los senadores de elección directa, que en 2026 son 209 porque Formentera elige por primera vez su propio senador. Cada elector recibe una papeleta blanca para el Congreso y una sepia para el Senado."
+  },
+  {
+    "q": "¿Quién puede votar en las elecciones generales?",
+    "a": "Los ciudadanos españoles mayores de edad inscritos en el censo electoral, es decir, quienes tengan 18 años cumplidos el día de la votación (nacidos el 29 de noviembre de 2008 o antes). Los extranjeros, incluidos los de la Unión Europea, no votan en las elecciones generales."
+  },
+  {
+    "q": "¿Puedo votar si cumplo 18 años justo antes del 29 de noviembre?",
+    "a": "Sí. Las listas del censo incluyen a todos los ciudadanos que sean mayores de edad en la fecha de la votación (art. 85.2 LOREG), aunque cumplan los 18 años después del cierre del censo. Basta con haber nacido el 29 de noviembre de 2008 o antes."
+  },
+  {
+    "q": "¿Cuántos escaños tiene el Congreso y cuál es la mayoría absoluta?",
+    "a": "El Congreso tiene 350 diputados y la mayoría absoluta es de 176. Ese es el número de votos favorables necesarios para que un candidato sea investido presidente en la primera votación; en la segunda basta con más síes que noes."
+  },
+  {
+    "q": "¿Cuándo es la campaña electoral?",
+    "a": "Empieza a las 0:00 del viernes 13 de noviembre y termina a las 24:00 del viernes 27 de noviembre de 2026. El sábado 28 de noviembre es jornada de reflexión y no se puede hacer campaña."
+  },
+  {
+    "q": "¿Qué documento necesito para votar?",
+    "a": "El original del DNI, el pasaporte o el permiso de conducir con fotografía, aunque esté caducado. No se admiten fotocopias. La app MiDNI no sirve: la Junta Electoral Central suspendió su uso para votar el 26 de marzo de 2026."
+  },
+  {
+    "q": "¿Hasta cuándo se puede pedir el voto por correo?",
+    "a": "Hasta el jueves 19 de noviembre de 2026, en cualquier oficina de Correos o en su web con certificado digital o DNI electrónico. La documentación se envía entre el 9 y el 23 de noviembre y el voto debe entregarse en Correos como muy tarde el miércoles 25 de noviembre."
+  },
+  {
+    "q": "¿Cómo sé dónde me toca votar?",
+    "a": "En la tarjeta censal que envía la Oficina del Censo Electoral, en la sede electrónica del INE o en tu ayuntamiento. Del 12 al 19 de octubre de 2026 puedes consultar el censo y reclamar si hay errores en tus datos."
+  },
+  {
+    "q": "¿Cuándo se sabe si me ha tocado mesa electoral y cuánto se cobra?",
+    "a": "Los sorteos se celebran entre el 31 de octubre y el 4 de noviembre de 2026 y la notificación llega en los tres días siguientes. Los titulares cobran una dieta de 75 €, tienen permiso retribuido si trabajan el domingo y una reducción de 5 horas de jornada el lunes 30 de noviembre."
+  },
+  {
+    "q": "¿Cómo votan los españoles que viven en el extranjero?",
+    "a": "Los inscritos en el CERA ya no tienen que pedir el voto (el voto rogado se suprimió en 2022): reciben la documentación de oficio y pueden enviar el voto por correo al consulado hasta el 24 de noviembre o depositarlo en urna en el consulado del 21 al 26 de noviembre. Quienes están fuera temporalmente (ERTA) deben solicitarlo en su consulado hasta el 31 de octubre."
+  },
+  {
+    "q": "¿Hasta cuándo se pueden publicar encuestas?",
+    "a": "Hasta el lunes 23 de noviembre. El artículo 69.7 de la LOREG prohíbe publicar, difundir o reproducir sondeos electorales durante los cinco días anteriores a la votación, del martes 24 al sábado 28 de noviembre de 2026."
+  },
+  {
+    "q": "¿Cómo se reparten los escaños?",
+    "a": "En el Congreso, cada provincia reparte sus escaños con la fórmula D'Hondt entre las candidaturas que superan el 3 % de los votos válidos en esa provincia. En el Senado se vota con listas abiertas: en cada provincia peninsular se marcan hasta tres candidatos y salen elegidos los cuatro más votados."
+  },
+  {
+    "q": "¿Cuándo se constituyen las nuevas Cortes?",
+    "a": "La Constitución (art. 68.6) obliga a convocar las nuevas Cámaras dentro de los 25 días siguientes a las elecciones, es decir, como muy tarde el 24 de diciembre de 2026. La fecha exacta de la sesión constitutiva la fija el Real Decreto de convocatoria. El escrutinio general oficial empieza el viernes 4 de diciembre."
+  }
+]
