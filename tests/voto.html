@@ -1,0 +1,18 @@
+<!doctype html><body><pre id="o"></pre><iframe id="a" src="/votacion/" width="1200" height="900"></iframe>
+<script>
+var out=[];function log(x){out.push(x);document.getElementById('o').textContent=out.join('\n');}
+setTimeout(function(){
+ var A=document.getElementById('a').contentDocument;
+ log('share hidden antes: '+A.querySelector('[data-share]').hidden);
+ A.querySelector('input[value="BLANCO"]').click();
+ var s=A.querySelector('select'); s.value='zaragoza';
+ A.querySelector('[data-submit]').click();
+ setTimeout(function(){
+   log('estado: '+A.querySelector('[data-voto]').getAttribute('data-state'));
+   log('msg: '+A.querySelector('[data-msg]').textContent+' | mine: '+A.querySelector('[data-mine]').textContent);
+   log('res: '+A.querySelector('[data-bars]').textContent.replace(/\s+/g,' ').slice(0,120));
+   A.querySelectorAll('[data-layers] button')[2].click();
+   setTimeout(function(){ log('legend: '+A.querySelector('[data-legend]').textContent); var z=A.querySelector('a[data-slug="zaragoza"] path'); log('fill zgz: '+z.style.fill); },800);
+ },4000);
+},3000);
+</script>

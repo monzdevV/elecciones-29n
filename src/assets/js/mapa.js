@@ -30,7 +30,11 @@
   function fillFor(layer, p, mini) {
     if (layer === "escanos") return SEQ[seatQ(p.s)];
     if (layer === "lectores") {
-      if (!lectores || lectores.veda) return "var(--map-empty)";
+      if (!lectores) return "var(--map-empty)";
+      if (!lectores.revelado) {
+        var v = (lectores.participacion || {})[p.slug] || 0;
+        return v ? SEQ[v < 5 ? 1 : v < 20 ? 2 : v < 100 ? 3 : v < 500 ? 4 : 5] : "var(--map-empty)";
+      }
       var c = lectores.provincias && lectores.provincias[p.slug];
       if (!c) return "var(--map-empty)";
       var L = leaderOf(c);
@@ -97,7 +101,12 @@
         legend.appendChild(note("Diputados que elige cada provincia en 2026"));
       } else if (layer === "lectores") {
         if (!lectores) { legend.appendChild(note("Cargando la votación de los lectores…")); return; }
-        if (lectores.veda) { legend.appendChild(note("Resultados ocultos hasta el 29 de noviembre a las 20:00 (LOREG, art. 69).")); return; }
+        if (!lectores.revelado) {
+          [["1–4", 1], ["5–19", 2], ["20–99", 3], ["100–499", 4], ["500+", 5]].forEach(function (x) { legend.appendChild(chip(SEQ[x[1]], x[0])); });
+          var tv = lectores.total || 0;
+          legend.appendChild(note(tv.toLocaleString("es-ES") + (tv === 1 ? " voto simbólico" : " votos simbólicos") + ". El resultado por partido se desvela el 29 de noviembre a las 21:00."));
+          return;
+        }
         var seen = {};
         for (var s in (lectores.provincias || {})) { var L = leaderOf(lectores.provincias[s]); if (L.total >= 3) seen[L.party] = 1; }
         Object.keys(seen).forEach(function (k) { legend.appendChild(chip(mini.colors[k], mini.names[k] || k)); });
@@ -123,7 +132,10 @@
         return '<div class="tipbar"><span>' + esc(mini.names[r[0]] || r[0]) + '</span><b style="--w:' + Math.min(100, r[1] * 2) + '%;--c:' + r[2] + '"></b><em>' + fmt.format(r[1]) + ' %</em></div>';
       }).join("");
       var extra = "";
-      if (layer === "lectores" && lectores && !lectores.veda) {
+      if (layer === "lectores" && lectores && !lectores.revelado) {
+        var nv = (lectores.participacion || {})[p.slug] || 0;
+        extra = '<p class="tip__lect">' + (nv ? "Lectores: " + nv + " voto" + (nv === 1 ? "" : "s") + " simbólico" + (nv === 1 ? "" : "s") : "Aún no hay votos de lectores aquí") + "</p>";
+      } else if (layer === "lectores" && lectores) {
         var c = lectores.provincias && lectores.provincias[p.slug];
         var L = c ? leaderOf(c) : { total: 0 };
         extra = '<p class="tip__lect">' + (L.total ? "Lectores: " + L.total + " voto" + (L.total === 1 ? "" : "s") + (L.party ? " · gana " + esc(mini.names[L.party] || L.party) : "") : "Aún no hay votos de lectores aquí") + "</p>";

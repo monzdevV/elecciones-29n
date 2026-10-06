@@ -34,6 +34,24 @@
     for (var i = 0; i < nodes.length; i++) nodes[i].textContent = txt;
   }
 
+  /* Cuenta atrás grande de la portada: días, horas y minutos. */
+  function bigCountdown() {
+    var box = document.querySelector("[data-cd]");
+    if (!box) return;
+    var d = box.querySelector("[data-cd-d]"), h = box.querySelector("[data-cd-h]"), m = box.querySelector("[data-cd-m]");
+    var target = Date.UTC(2026, 10, 29, 8, 0, 0);
+    function pad(n) { return n < 10 ? "0" + n : String(n); }
+    function tick() {
+      var ms = Math.max(0, target - Date.now());
+      var mins = Math.floor(ms / 60000);
+      d.textContent = String(Math.floor(mins / 1440));
+      h.textContent = pad(Math.floor(mins % 1440 / 60));
+      m.textContent = pad(mins % 60);
+    }
+    tick();
+    setInterval(tick, 20000);
+  }
+
   /* Marca el próximo hito del calendario. */
   function timeline() {
     var items = document.querySelectorAll(".timeline li[data-date]");
@@ -48,6 +66,6 @@
     }
   }
 
-  function boot() { safe(menu); safe(countdown); safe(timeline); }
+  function boot() { safe(menu); safe(countdown); safe(bigCountdown); safe(timeline); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

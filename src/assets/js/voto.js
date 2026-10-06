@@ -74,10 +74,15 @@
     function state(s) { root.setAttribute("data-state", s); }
     function render(r) {
       if (!r) return;
-      if (r.veda) {
+      if (!r.revelado) {
+        // Hasta el cierre de urnas solo se muestra la participación (LOREG, art. 69, y doctrina de la JEC).
+        var n = r.total || 0;
+        bars.innerHTML = '<div class="reveal"><p class="reveal__n"></p><p class="reveal__l"></p>' +
+          '<p class="reveal__when">El resultado por partido se desvela el <b>domingo 29 de noviembre a las 21:00</b>, cuando cierran los últimos colegios (Canarias). Antes no se puede mostrar: la ley electoral lo trataría como una encuesta.</p></div>';
+        bars.querySelector(".reveal__n").textContent = n.toLocaleString("es-ES");
+        bars.querySelector(".reveal__l").textContent = n === 1 ? "voto registrado" : "votos registrados";
+        total.textContent = "Votación simbólica: no es una encuesta ni tiene valor estadístico. Solo vota quien entra en la web.";
         out.hidden = false;
-        bars.innerHTML = "";
-        total.textContent = "Los resultados están ocultos del 24 de noviembre al 29 de noviembre a las 20:00: la ley electoral prohíbe difundir sondeos esos días. Tu voto sí se registra.";
         return;
       }
       var arr = Object.keys(r.partidos || {}).map(function (k) { return [k, r.partidos[k]]; }).filter(function (x) { return x[1] > 0; })

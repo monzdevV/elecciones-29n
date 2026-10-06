@@ -23,6 +23,9 @@ CONFIG = {
     "owner_nif": "[NIF]",
     "owner_address": "[DOMICILIO]",
     "contact_email": "[EMAIL DE CONTACTO]",
+    # Votación simbólica (Supabase). La clave publicable es pública por diseño: solo permite votar y leer totales.
+    "supabase_url": "https://gmzslroxejknsgcldmrx.supabase.co",
+    "supabase_key": "sb_publishable_0Pwou436lxL-WPtxn1Hgnw_A2aZGahS",
 }
 ROOT = Path(__file__).parent
 SRC, DATA, CONTENT, DIST = ROOT / "src", ROOT / "data", ROOT / "content", ROOT / "dist"
@@ -193,9 +196,10 @@ def dhondt_table(prov):
 # Plantilla
 # ----------------------------------------------------------------------------
 CUR = ' aria-current="page"'
+VOTE_CLS = ' class="nav__vote"'
 NAV = [("/mesa-electoral/", "Mesa electoral"), ("/voto-por-correo/", "Voto por correo"),
        ("/calendario-electoral/", "Calendario"), ("/simulador-escanos/", "Simulador"),
-       ("/test-a-quien-voto/", "Test"), ("/provincias/", "Provincias")]
+       ("/test-a-quien-voto/", "Test"), ("/provincias/", "Provincias"), ("/votacion/", "Vota")]
 
 BRAND_SVG = """<svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1.5" y="9.5" width="29" height="21" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 9.5h14" stroke="var(--paper)" stroke-width="3"/><path d="M8.5 9.5h15" stroke="currentColor" stroke-width="2" stroke-dasharray="0"/><rect x="10" y="2" width="12" height="12" fill="var(--sepia)" transform="rotate(-6 16 8)"/><path d="M6 23h20" stroke="currentColor" stroke-width="1"/></svg>"""
 
@@ -239,7 +243,7 @@ def page(path, title, description, body, *, ld=None, active=None, og_type="artic
     canonical = url(path)
     lds = "".join(jsonld(x) for x in (ld or []))
     nav = "".join(
-        f'<a href="{p}"{CUR if active == p else ""}>{E(n)}</a>' for p, n in NAV)
+        f'<a href="{p}"{CUR if active == p else ""}{VOTE_CLS if p == "/votacion/" else ""}>{E(n)}</a>' for p, n in NAV)
     drawer = "".join(f'<li><a href="{p}">{E(n)}</a></li>' for p, n in NAV + [("/como-votar/", "Cómo votar"), ("/ley-dhondt/", "Ley D'Hondt"), ("/voto-extranjero/", "Voto exterior")])
     adsense = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={CONFIG["adsense_client"]}" crossorigin="anonymous"></script>'
                if CONFIG["adsense_client"] else "<!-- AdSense: rellena CONFIG['adsense_client'] en build.py. Activa el mensaje de consentimiento (CMP) de Google en AdSense > Privacidad y mensajes. -->")
@@ -263,6 +267,7 @@ def page(path, title, description, body, *, ld=None, active=None, og_type="artic
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1c2433">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="e29n-voto" content="{CONFIG['supabase_url']}|{CONFIG['supabase_key']}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400..650&display=swap">
@@ -289,6 +294,7 @@ def page(path, title, description, body, *, ld=None, active=None, og_type="artic
     <div>
       <p><strong>{E(CONFIG['site_name'])}</strong> es una guía ciudadana independiente sobre las elecciones generales del 29 de noviembre de 2026. No está vinculada a ningún partido ni a la Administración.</p>
       <p>Los datos oficiales proceden del BOE, la Junta Electoral Central, el Ministerio del Interior y el INE. Ante cualquier duda, prevalece la información oficial.</p>
+      <p>Límites administrativos del mapa © Instituto Geográfico Nacional de España (CC BY 4.0).</p>
     </div>
     <div><h2>Guías</h2><ul><li><a href="/mesa-electoral/">Mesa electoral</a></li><li><a href="/voto-por-correo/">Voto por correo</a></li><li><a href="/como-votar/">Cómo votar</a></li><li><a href="/voto-extranjero/">Voto desde el extranjero</a></li><li><a href="/calendario-electoral/">Calendario electoral</a></li></ul></div>
     <div><h2>Herramientas</h2><ul><li><a href="/simulador-escanos/">Simulador de escaños</a></li><li><a href="/test-a-quien-voto/">Test: ¿a quién voto?</a></li><li><a href="/ley-dhondt/">Cómo funciona la ley D'Hondt</a></li><li><a href="/provincias/">Las 52 circunscripciones</a></li></ul></div>
@@ -558,6 +564,179 @@ def sim_widget(data, title, note):
 </div>"""
 
 
+
+# ----------------------------------------------------------------------------
+# Mapa interactivo y votación simbólica (v2)
+# ----------------------------------------------------------------------------
+GEO = load_json(DATA / "mapa.json")
+assert set(GEO["paths"]) == set(BY_SLUG), "mapa.json y provincias.json no coinciden"
+VOTE_PARTIES = ["PP", "PSOE", "VOX", "SUMAR", "PODEMOS", "SALF", "ERC", "JUNTS", "BILDU", "PNV", "BNG", "CC", "UPN", "OTRO", "BLANCO"]
+VOTE_NAMES = dict(PARTY_SHORT, OTRO="Otro partido", BLANCO="En blanco")
+VOTE_COLORS = {k: color(k) for k in VOTE_PARTIES}
+VOTE_COLORS.update({"OTRO": NEUTRAL_OTHERS, "BLANCO": "#e8e8e8"})
+
+
+def mini_data():
+    out = []
+    for p in PROVS:
+        top = [[r["partido"], round(r["pct"], 1), color(r["partido"])] for r in p["res"][:3]]
+        out.append({"slug": p["slug"], "n": p["nombre"], "s": p["seats"], "r": top})
+    names = {k: short(k) if k in PARTY_SHORT else k for k in PCOLORS}
+    names.update(VOTE_NAMES)
+    names["SUMAR"] = "Sumar"
+    colors = dict(PCOLORS)
+    colors.update(VOTE_COLORS)
+    return {"p": out, "names": names, "colors": colors}
+
+
+MINI = mini_data()
+
+
+def map_svg():
+    x, y, w, h = GEO["canarias_box"]
+    parts = [f'<svg class="map__svg" viewBox="{GEO["viewBox"]}" role="img" aria-label="Mapa de las 52 circunscripciones de España">',
+             f'<rect class="map__inset" x="{x}" y="{y}" width="{w}" height="{h}"/>']
+    for slug, d in GEO["paths"].items():
+        parts.append(f'<a href="/provincias/{slug}/" data-slug="{slug}"><path d="{d}"/></a>')
+    parts.append("</svg>")
+    return "".join(parts)
+
+
+def map_widget(layer="ganador", inline=True, switcher=True, highlight=None, title="", extra_cls=""):
+    seg = ""
+    if switcher:
+        btns = "".join(f'<button type="button" data-l="{k}" aria-pressed="{str(k == layer).lower()}">{E(v)}</button>'
+                       for k, v in [("ganador", "Ganador 2023"), ("escanos", "Escaños 2026"), ("lectores", "Votación lectores")])
+        seg = f'<div class="seg" role="group" aria-label="Qué muestra el mapa" data-layers>{btns}</div>'
+    bar = f'<div class="map__bar"><strong>{E(title)}</strong>{seg}</div>' if (title or seg) else ""
+    payload = ""
+    svg = ""
+    if inline:
+        payload = '<script type="application/json">' + json.dumps(MINI, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + "</script>"
+        svg = map_svg()
+    hl = f' data-highlight="{highlight}"' if highlight else ""
+    legend = '<div class="map__legend" data-legend></div>' if layer != "locator" else ""
+    return (f'<div class="map {extra_cls}" data-map data-layer="{layer}"{hl}>{payload}{bar}'
+            f'<div class="map__canvas">{svg}<div class="map__tip" role="status"></div></div>{legend}</div>')
+
+
+def vote_widget(province=None, autoload=False):
+    chips = "".join(
+        f'<label class="chip"><input type="radio" name="partido" value="{k}"><span><i style="background:{VOTE_COLORS[k]}"></i>{E(VOTE_NAMES[k])}</span></label>'
+        for k in VOTE_PARTIES)
+    opts = '<option value="">Elige tu provincia</option>' + "".join(
+        f'<option value="{p["slug"]}">{E(p["nombre"])}</option>' for p in PROVS)
+    payload = json.dumps({"names": VOTE_NAMES, "colors": VOTE_COLORS}, ensure_ascii=False, separators=(",", ":"))
+    attrs = (f' data-province="{province}"' if province else "") + (" data-autoload" if autoload else "")
+    return f"""<div class="voto" data-voto data-state="idle"{attrs}>
+  <script type="application/json">{payload}</script>
+  <div class="voto__head"><strong>Votación simbólica de los lectores</strong><span>No es una encuesta · un voto por dispositivo</span></div>
+  <div class="voto__body">
+    <form novalidate>
+      <fieldset><legend>Si las elecciones fueran hoy, ¿a quién votarías?</legend><div class="chips">{chips}</div></fieldset>
+      <div class="voto__row">
+        <label>Tu provincia<select name="provincia">{opts}</select></label>
+        <button class="btn" type="submit" data-submit>Votar</button>
+      </div>
+      <p class="voto__msg" data-msg aria-live="polite"></p>
+      <p class="voto__mine" data-mine></p>
+      <p class="voto__note">Solo se guarda el partido y la provincia, sin datos personales. Puedes cambiar tu voto cuando quieras.</p>
+    </form>
+    <div class="voto__res" data-results hidden aria-live="polite">
+      <h3>Así va la votación</h3>
+      <div class="vbars" data-bars></div>
+      <p class="voto__total" data-total></p>
+      <div class="share" data-share hidden><a href="#" data-net="wa" target="_blank" rel="noopener">Compartir en WhatsApp</a><a href="#" data-net="x" target="_blank" rel="noopener">Compartir en X</a><a href="#" data-net="copy">Copiar enlace</a></div>
+    </div>
+  </div>
+</div>"""
+
+
+def build_home2():
+    faq_pairs = []
+    fg = CONTENT / "faq-general.json"
+    if fg.exists():
+        faq_pairs = [(x["q"], E(x["a"])) for x in load_json(fg)]
+    faq_html, faq_ld = faq_block(faq_pairs, "Lo que más se pregunta sobre el 29N") if faq_pairs else ("", None)
+    guides = "".join(f'<a href="/{s}/"><b>{E(n)}</b><span>{E(d)}</span></a>' for s, n, d in GUIDES)
+    tl = "".join(
+        f'<li data-date="{d}"' + (f' data-end="{e}"' if e else "") + f'><time datetime="{d}">{E(lbl)}</time><span>{E(t)}</span></li>'
+        for d, e, lbl, t in TIMELINE)
+    by_cc = {}
+    for p in PROVS:
+        by_cc.setdefault(p["ccaa"], []).append(p)
+    prov_list = "".join(
+        f'<h3>{E(cc)}</h3>' + "".join(f'<a href="/provincias/{p["slug"]}/">{E(p["nombre"])} <span>{p["seats"]}</span></a>' for p in ps)
+        for cc, ps in sorted(by_cc.items(), key=lambda x: slugify(x[0])))
+    site_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": CONFIG["site_name"], "url": url("/"),
+               "inLanguage": "es-ES", "description": "Guía ciudadana independiente de las elecciones generales del 29 de noviembre de 2026."}
+    body = f"""<section class="night">
+  <div class="wrap hero2">
+    <div>
+      <h1>Elecciones generales del <em>29 de noviembre</em></h1>
+      <p class="dek">Mesa electoral, voto por correo, plazos y el reparto de escaños de cada provincia. Toca el mapa para ver la tuya.</p>
+      <div class="cd" data-cd aria-label="Cuenta atrás hasta la apertura de los colegios">
+        <div class="cd__u"><span class="cd__n" data-cd-d>--</span><span class="cd__l">días</span></div>
+        <div class="cd__u"><span class="cd__n" data-cd-h>--</span><span class="cd__l">horas</span></div>
+        <div class="cd__u"><span class="cd__n" data-cd-m>--</span><span class="cd__l">minutos</span></div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="/votacion/">Vota en la votación simbólica</a>
+        <a class="btn btn--ghost" href="/simulador-escanos/">Simular el reparto</a>
+      </div>
+    </div>
+    <div>{map_widget("ganador", title="Las 52 circunscripciones")}<p class="map__credit">Límites © Instituto Geográfico Nacional · Resultados 2023: Ministerio del Interior</p></div>
+  </div>
+</section>
+<div class="wrap">
+  <dl class="keyfacts" style="margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr))">
+    <div><dt>Votación</dt><dd>Dom. 29 nov</dd></div>
+    <div><dt>Colegios</dt><dd>9:00 – 20:00</dd></div>
+    <div><dt>Congreso</dt><dd>350 escaños</dd></div>
+    <div><dt>Mayoría absoluta</dt><dd>176</dd></div>
+  </dl>
+  {ad("wide")}
+  <section class="vote-band"><h2>Y tú, ¿a quién votarías?</h2><p>Participa en la votación simbólica de los lectores. El resultado por partido se desvela la noche electoral, cuando cierren los colegios.</p>{vote_widget(autoload=True)}</section>
+  <section class="section"><h2>Las dudas que más se buscan estos días</h2><div class="index">{guides}<a href="/test-a-quien-voto/"><b>Test: ¿a quién voto?</b><span>24 preguntas para ver tu afinidad con cada partido</span></a><a href="/simulador-escanos/"><b>Simulador de escaños</b><span>Prueba porcentajes y mira el hemiciclo resultante</span></a></div></section>
+  <section class="section"><h2>Calendario: lo próximo que pasa</h2><ol class="timeline">{tl}</ol><p style="margin-top:1rem;font-family:var(--f-ui);font-size:.9rem"><a href="/calendario-electoral/">Ver el calendario completo</a></p></section>
+  <section class="section"><h2>Tu provincia: escaños, resultados de 2023 y simulador</h2><div class="provgrid">{prov_list}</div></section>
+  {faq_html}
+  <div style="height:var(--s-8)"></div>
+</div>"""
+    title = "Elecciones generales 29 de noviembre de 2026: guía y simulador"
+    desc = "Elecciones generales 29N 2026: mapa por provincias, mesa electoral, voto por correo, calendario, simulador D'Hondt, test y votación simbólica."
+    lds = [site_ld, EVENT_LD] + ([faq_ld] if faq_ld else [])
+    add("/", page("/", title, desc, body, ld=lds, og_type="website", scripts=("mapa.js", "voto.js")), "1.0")
+
+
+def build_votacion():
+    path = "/votacion/"
+    crumbs, bc = breadcrumbs([("Votación simbólica", path)])
+    pairs = [
+        ("¿Es una encuesta?", "No. Es una votación simbólica abierta a quien visita la web, sin muestra representativa ni valor estadístico. Sirve para participar y comparar con el resultado real."),
+        ("¿Cuándo se ven los resultados por partido?", "El domingo 29 de noviembre de 2026 a las 21:00 (hora peninsular), cuando cierran los últimos colegios en Canarias. Hasta entonces solo mostramos cuántas personas han votado en cada provincia."),
+        ("¿Por qué no se enseñan antes?", "La Ley Orgánica del Régimen Electoral General (art. 69) regula la difusión de sondeos y la prohíbe los cinco días anteriores a la votación. La Junta Electoral Central considera sondeo cualquier estudio de intención de voto, se llame como se llame, así que no mostramos reparto por partido hasta que cierren las urnas."),
+        ("¿Qué datos guardáis?", "Solo el partido, la provincia y la fecha. No guardamos tu IP ni datos personales. Tu navegador conserva un identificador aleatorio para que puedas cambiar tu voto sin duplicarlo."),
+        ("¿Puedo cambiar mi voto?", "Sí, cuantas veces quieras desde el mismo dispositivo. Cuenta solo el último."),
+    ]
+    faq_html, faq_ld = faq_block(pairs)
+    body = f"""{crumbs}
+<div class="wrap">
+  <header class="pagehead">
+    <h1>Votación simbólica: ¿a quién votarías el 29N?</h1>
+    <p class="dek">Vota en un clic y comparte. El resultado por partido de los lectores se desvela la noche electoral, a las 21:00.</p>
+  </header>
+  {vote_widget(autoload=True)}
+  {ad("wide")}
+  <div class="layout"><div>
+    <section style="margin-bottom:2rem">{map_widget("lectores", inline=False, title="Participación por provincia")}</section>
+    {faq_html}
+  </div><aside class="rail"><div class="rail__sticky">{ad("rail")}</div></aside></div>
+</div>"""
+    add(path, page(path, "Votación simbólica elecciones 29N 2026: ¿a quién votarías?",
+                   "Vota en la votación simbólica de las elecciones generales del 29 de noviembre de 2026 y descubre el resultado de los lectores la noche electoral.",
+                   body, ld=[bc, faq_ld], active=path, scripts=("mapa.js", "voto.js")), "0.9")
+
 # ----------------------------------------------------------------------------
 # Páginas
 # ----------------------------------------------------------------------------
@@ -795,12 +974,17 @@ def build_province(p, siblings):
     note = "Empieza con los resultados de 2023 en la provincia. Escribe tus porcentajes: se aplica D'Hondt con el umbral del 3 %. Es una herramienta de cálculo, no una encuesta."
     body = f"""{crumbs}
 <div class="wrap">
-  <header class="pagehead">
-    <h1>Elecciones generales 2026 {E(en)}</h1>
-    <p class="dek">Diputados que elige, resultados de 2023, cómo se repartieron los escaños y un simulador con los datos de la provincia.</p>
-    <p class="updated">Actualizado el <time datetime="{TODAY.isoformat()}">{fdate(TODAY)}</time></p>
-  </header>
-  {answer_box(answer)}
+  <div class="prov-head">
+    <div>
+      <header class="pagehead">
+        <h1>Elecciones generales 2026 {E(en)}</h1>
+        <p class="dek">Diputados que elige, resultados de 2023, cómo se repartieron los escaños y un simulador con los datos de la provincia.</p>
+        <p class="updated">Actualizado el <time datetime="{TODAY.isoformat()}">{fdate(TODAY)}</time></p>
+      </header>
+      {answer_box(answer)}
+    </div>
+    <div class="locator" style="padding-top:1.5rem">{map_widget("locator", inline=False, switcher=False, highlight=p["slug"])}</div>
+  </div>
   <dl class="factrow">
     <div><dt>Diputados 2026</dt><dd>{d26}{f"<small>{'+' if delta > 0 else ''}{delta}</small>" if delta else ""}</dd></div>
     <div><dt>Senadores</dt><dd>{sen_n}</dd></div>
@@ -828,6 +1012,7 @@ def build_province(p, siblings):
       <p>En la papeleta blanca del Congreso eliges una lista cerrada. En la sepia del Senado puedes marcar {senate_marks(p['slug'])}.</p>
       <p>Si no vas a estar ese día, el plazo para pedir el <a href="/voto-por-correo/">voto por correo</a> termina el jueves 19 de noviembre. Si te ha tocado formar parte de una mesa, aquí tienes la <a href="/mesa-electoral/">guía de la mesa electoral</a>.</p>
     </article>
+    <section style="margin-top:3rem"><h2 style="font-size:1.6rem;margin-bottom:1rem">¿A quién votarías {E(en)}?</h2>{vote_widget(province=p["slug"])}</section>
     {faq_html}
     <aside class="sources"><h2>Fuentes</h2><ul><li>Resultados 2023: <a href="https://infoelectoral.interior.gob.es" rel="noopener">Ministerio del Interior, Infoelectoral</a>.</li><li>Diputados por circunscripción: Real Decreto de convocatoria (BOE, 6 de octubre de 2026) y LOREG, arts. 161–163.</li></ul></aside>
   </div><aside class="rail"><div class="rail__sticky"><nav class="toc" aria-label="En esta página"><h2>En esta página</h2><ol><li><a href="#resultados-2023">Resultados 2023</a></li><li><a href="#reparto-dhondt">Reparto D'Hondt</a></li><li><a href="#simulador">Simulador</a></li><li><a href="#como-votar">Cómo votar</a></li><li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li></ol></nav>{ad("rail")}</div></aside></div>
@@ -837,7 +1022,7 @@ def build_province(p, siblings):
     if len(title) > 62:
         title = f"Elecciones 2026 {en}: escaños y resultados"
     desc = f"{p['nombre']} elige {d26} {dip} el 29N. Resultados de 2023, reparto D'Hondt, votos que costó el último escaño y simulador provincial."
-    add(path, page(path, title, desc, body, ld=[bc, faq_ld, dataset_ld], active="/provincias/", scripts=("sim.js",)), "0.8")
+    add(path, page(path, title, desc, body, ld=[bc, faq_ld, dataset_ld], active="/provincias/", scripts=("sim.js", "mapa.js", "voto.js")), "0.8")
 
 
 def build_provinces_index():
@@ -855,7 +1040,7 @@ def build_provinces_index():
   <header class="pagehead"><h1>Escaños por provincia en las elecciones generales de 2026</h1>
   <p class="dek">Las 52 circunscripciones del Congreso, con los diputados que elige cada una, sus resultados de 2023 y un simulador propio.</p></header>
   {answer_box("El Congreso elige 350 diputados en 52 circunscripciones. Madrid es la que más elige y Ceuta y Melilla, las que menos (uno cada una). Cada provincia tiene dos escaños fijos y el resto se reparte según su población.", E(ch_txt))}
-  <div style="margin-top:2rem;max-width:46rem">{cartogram()}</div>
+  <div style="margin-top:2rem;max-width:46rem">{map_widget("escanos", inline=False, title="Diputados por provincia")}</div>
   {ad("wide")}
   <section class="section" style="border-top:0;padding-top:0"><h2>Tabla de las 52 circunscripciones</h2>
   <div class="table-scroll"><table class="table"><thead><tr><th>Provincia</th><th>Comunidad</th><th class="r">Diputados 2023</th><th class="r">Diputados 2026</th><th class="r">Senadores</th></tr></thead><tbody>{rows}</tbody></table></div></section>
@@ -864,7 +1049,7 @@ def build_provinces_index():
                "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(f'/provincias/{p["slug"]}/'), "name": p["nombre"]} for i, p in enumerate(PROVS)]}
     add(path, page(path, "Escaños por provincia: elecciones generales 2026",
                    "Cuántos diputados elige cada una de las 52 provincias el 29N de 2026, cambios respecto a 2023, senadores y resultados por circunscripción.",
-                   body, ld=[bc, item_ld], active=path), "0.9")
+                   body, ld=[bc, item_ld], active=path, scripts=("mapa.js",)), "0.9")
 
 
 def simple_page(path, title, desc, h1, html_body, priority="0.3"):
@@ -928,6 +1113,7 @@ def build_seo_files(guides_meta):
     lines += ["", "## Herramientas", "",
               f"- [Simulador de escaños]({url('/simulador-escanos/')}): reparto D'Hondt en las 52 circunscripciones a partir de porcentajes introducidos por el usuario.",
               f"- [Test de afinidad política]({url('/test-a-quien-voto/')}): 24 afirmaciones y posiciones documentadas de los partidos estatales.",
+              f"- [Votación simbólica]({url('/votacion/')}): votación abierta de los lectores, sin valor estadístico; el resultado por partido se publica el 29 de noviembre a las 21:00.",
               "", "## Provincias", ""]
     lines += [f"- [{p['nombre']}]({url('/provincias/' + p['slug'] + '/')}): {p['seats']} diputados en 2026" for p in PROVS]
     write("/llms.txt", "\n".join(lines) + "\n")
@@ -946,8 +1132,16 @@ def main():
             shutil.copy(SRC / extra, DIST / extra)
     if (SRC / "og.png").exists():
         shutil.copy(SRC / "og.png", DIST / "assets" / "og.png")
+    css = DIST / "assets" / "css" / "site.css"
+    v2 = DIST / "assets" / "css" / "v2.css"
+    css.write_bytes(css.read_bytes() + b"\n" + v2.read_bytes())
+    v2.unlink()
+    (DIST / "assets" / "data").mkdir(parents=True, exist_ok=True)
+    (DIST / "assets" / "data" / "mapa.json").write_text(json.dumps(GEO, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (DIST / "assets" / "data" / "provincias-mini.json").write_text(json.dumps(MINI, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     guides_meta = [guide_page(*g) for g in GUIDES]
-    build_home(guides_meta)
+    build_home2()
+    build_votacion()
     build_simulator()
     build_test()
     build_provinces_index()
